@@ -13,13 +13,13 @@
   text-align: center;
 
   cursor: pointer;
+  transition: var(--transition-button);
 }
 
 /* primary */
 .button_primary {
   color: var(--primary-text);
   background-color: var(--primary);
-  transition: var(--transition-button);
 }
 
 .button_primary:hover {
@@ -36,7 +36,6 @@
 .button_secondary {
   color: var(--secondary-text);
   background-color: var(--secondary);
-  transition: var(--transition-button);
 }
 
 .button_secondary:hover {
@@ -54,7 +53,6 @@
   color: var(--alternate-text);
   background-color: var(--alternate);
   border: 1px solid var(--alternate-border);
-  transition: var(--transition-button);
 }
 
 .button_alternate:hover {

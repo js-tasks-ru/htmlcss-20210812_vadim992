@@ -29,7 +29,7 @@
 .button_primary:disabled {
   background-color: var(--primary-disabled);
   opacity: 0.5;
-  cursor: default;
+  pointer-events: none;
 }
 
 /* secondary */
@@ -46,7 +46,7 @@
 .button_secondary:disabled {
   background-color: var(--secondary-disabled);
   opacity: 0.5;
-  cursor: default;
+  pointer-events: none;
 }
 
 /* alternate */
@@ -63,8 +63,6 @@
 }
 
 .button_alternate:disabled {
-  background-color: var(--alternate-disabled);
-  border: 1px solid var(--alternate-disabled-border);
   opacity: 0.5;
-  cursor: default;
+  pointer-events: none;
 }

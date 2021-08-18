@@ -32,8 +32,6 @@
     --alternate-hover: var(--white);
     --alternate-border: var(--grey-3);
     --alternate-hover-border: var(--black);
-    --alternate-disabled: var(--white);
-    --alternate-disabled-border: var(--grey-3);
 
     --transition-button: opacity 200ms ease-in-out, background 200ms ease-in-out;
 

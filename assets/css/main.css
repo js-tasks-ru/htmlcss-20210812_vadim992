@@ -24,11 +24,7 @@
     --alternate-text: var(--black);
 
     --primary-hover: #2342C0;
-    --primary-disabled: #4263EB;
-
     --secondary-hover: #5028C6;
-    --secondary-disabled: #7048E8;
-
     --alternate-hover: var(--white);
     --alternate-border: var(--grey-3);
     --alternate-hover-border: var(--black);

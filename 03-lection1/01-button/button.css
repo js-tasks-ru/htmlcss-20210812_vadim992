@@ -16,6 +16,11 @@
   transition: var(--transition-button);
 }
 
+.button:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
 /* primary */
 .button_primary {
   color: var(--primary-text);
@@ -24,12 +29,6 @@
 
 .button_primary:hover {
   background-color: var(--primary-hover);
-}
-
-.button_primary:disabled {
-  background-color: var(--primary-disabled);
-  opacity: 0.5;
-  pointer-events: none;
 }
 
 /* secondary */
@@ -42,12 +41,6 @@
   background-color: var(--secondary-hover);
 }
 
-.button_secondary:disabled {
-  background-color: var(--secondary-disabled);
-  opacity: 0.5;
-  pointer-events: none;
-}
-
 /* alternate */
 .button_alternate {
   color: var(--alternate-text);
@@ -58,9 +51,4 @@
 .button_alternate:hover {
   background-color: var(--alternate-hover);
   border: 1px solid var(--alternate-hover-border);
-}
-
-.button_alternate:disabled {
-  opacity: 0.5;
-  pointer-events: none;
 }

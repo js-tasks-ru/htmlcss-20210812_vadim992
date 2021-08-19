@@ -1,0 +1,21 @@
+.footer {
+  color: var(--black);
+  text-align: center;
+}
+
+.footer__title {
+  margin-top: 71px;
+  font-family: var(--ff-secondary);
+  font-weight: 500;
+  font-size: 38px;
+  line-height: 48px;
+}
+
+.footer__description {
+  max-width: 640px;
+  margin: 32px auto 0;
+  font-family: var(--ff-secondary);
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+}

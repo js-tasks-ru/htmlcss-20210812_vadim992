@@ -1,6 +1,6 @@
 .header {
-  min-height: 237px;
-  padding: 96px 0 77px 160px;
+  padding-top: 96px;
+  padding-bottom: 77px;
   background-color: var(--white);
   border-bottom: 1px dotted var(--grey-3);
 }

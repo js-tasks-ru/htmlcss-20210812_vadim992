@@ -31,6 +31,8 @@
 
     --transition-button: opacity 200ms ease-in-out, background 200ms ease-in-out;
 
+    --ff-secondary: 'Inter', sans-serif;
+    --border-dark: var(--grey-3);
 }
 
 * {

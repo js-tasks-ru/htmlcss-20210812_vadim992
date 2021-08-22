@@ -1,0 +1,8 @@
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav__spacer {
+  width: 57px;
+}

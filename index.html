@@ -11,16 +11,55 @@
   <link rel="stylesheet" href="./components/main/main.css">
   <link rel="stylesheet" href="./components/header/header.css">
   <link rel="stylesheet" href="./components/footer/footer.css">
+  <link rel="stylesheet" href="./components/nav/nav.css">
+  <link rel="stylesheet" href="./components/menu/menu.css">
+  <link rel="stylesheet" href="./components/preview/preview.css">
+  <link rel="stylesheet" href="./components/card/card.css">
+  
+
 </head>
+
 <body class="page">
-    <header class="header">
-      <div class="page__box">
-        <h1 class="header__title">Reusable component library.</h1>        
-      </div>
+    <header class="header page__box">
+        <div class="header__top-panel">
+            <div class="header__logo">
+                <svg width="110" height="32" viewBox="0 0 110 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect y="1" width="30" height="30" fill="#212429"/>
+                    <rect x="38" width="32" height="32" rx="16" fill="#212429"/>
+                    <path d="M78 0L110 32H78V0Z" fill="#212429"/>
+                </svg>
+            </div>
+            <div class="header__nav">
+                <div class="nav">
+                    <ul class="menu menu_gap24">
+                        <li class="menu__item">Components</li>
+                        <li class="menu__item">About</li>
+                        <li class="menu__item">Contact</li>
+                    </ul>
+                    <div class="nav__spacer"></div>
+                    <div class="nav__controls">
+                        <span>controls</span>   <!-- sun toggle moon -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h1 class="header__title">Reusable component library</h1>
+        <ul class="menu menu_gap40">
+            <li class="menu__item">All components</li>
+            <li class="menu__item">Elements</li>
+            <li class="menu__item">Containers</li>
+            <li class="menu__item">Templates</li>
+        </ul>     
     </header>
     <main class="main">
-      <section class="preview">
-      </section>
+        <section class="preview page__box">
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+        </section>
     </main>
     <footer class="footer">
       <h2 class="footer__title">About</h2>

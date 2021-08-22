@@ -1,0 +1,25 @@
+.menu {
+  display: flex;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.menu_gap24 {
+  gap: 24px;
+}
+
+.menu_gap40 {
+  gap: 40px;
+}
+
+.menu__item {
+  font-family: inherit;
+  color: var(--black);
+}
+
+.menu__item:nth-child(n+2) {
+  color: var(--grey-3); /* tmp */
+}

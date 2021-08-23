@@ -1,4 +1,5 @@
 .header {
+  padding-top: 25px;
   padding-bottom: 13px;
   background-color: var(--white);
 }
@@ -18,10 +19,7 @@
 .header__top-panel {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-
-  padding-top: 25px;
-  
+  align-items: center;  
 }
 
 /* .header__logo {} */

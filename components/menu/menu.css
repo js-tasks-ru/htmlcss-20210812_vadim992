@@ -1,10 +1,5 @@
 .menu {
   display: flex;
-  font-family: Inter;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 24px;
 }
 
 .menu_gap24 {
@@ -16,10 +11,13 @@
 }
 
 .menu__item {
-  font-family: inherit;
-  color: var(--black);
+  font-family: var(--ff-secondary);
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--grey-3);
 }
 
-.menu__item:nth-child(n+2) {
-  color: var(--grey-3); /* tmp */
+.menu__item_active {
+  color: var(--black);
 }

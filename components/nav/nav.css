@@ -3,6 +3,6 @@
   align-items: center;
 }
 
-.nav__spacer {
-  width: 57px;
+.nav__controls {
+  padding-left: 56px;
 }

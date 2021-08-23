@@ -33,9 +33,24 @@
 
     --ff-secondary: 'Inter', sans-serif;
     --border-dark: var(--grey-3);
+
+    --main-bg: #F9FAFC;
 }
 
 * {
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style-type: none;
 }

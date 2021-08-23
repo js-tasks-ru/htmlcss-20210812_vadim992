@@ -1,0 +1,8 @@
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav__controls {
+  padding-left: 56px;
+}

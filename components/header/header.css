@@ -1,15 +1,27 @@
 .header {
-  padding-top: 96px;
-  padding-bottom: 77px;
+  padding-top: 25px;
+  padding-bottom: 13px;
   background-color: var(--white);
-  border-bottom: 1px dotted var(--grey-3);
 }
 
 .header__title {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin: 0;
+
   font-family: var(--ff-secondary);
   font-weight: 500;
   font-size: 50px;
-  margin: 0;
   line-height: 64px;
   color: var(--black);
 }
+
+.header__top-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;  
+}
+
+/* .header__logo {} */
+
+/* .header__nav {} */

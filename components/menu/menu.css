@@ -1,0 +1,23 @@
+.menu {
+  display: flex;
+}
+
+.menu_gap24 {
+  gap: 24px;
+}
+
+.menu_gap40 {
+  gap: 40px;
+}
+
+.menu__item {
+  font-family: var(--ff-secondary);
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--grey-3);
+}
+
+.menu__item_active {
+  color: var(--black);
+}

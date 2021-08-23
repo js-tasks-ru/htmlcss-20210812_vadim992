@@ -1,13 +1,11 @@
 .skeleton {
   display: flex;
   flex-direction: column;
+  gap: 24px;
 
-  width: 576px;
+  max-width: 576px;
   height: 192px;
-
-  padding-top: 24px;
-  padding-bottom: 32px;
-  padding-left: 24px;
+  padding: 24px 24px 32px;
 
   border: 1px solid var(--grey-3);
   border-radius: 8px;
@@ -19,7 +17,6 @@
   display: flex;
   align-items: center;
   gap: 16px;
-  padding-bottom: 24px;
 }
 
 .skeleton__down {
@@ -28,10 +25,10 @@
 }
 
 .skeleton__circle {
+  flex-shrink: 0;
   width: 64px;
   height: 64px;
-  border-radius: 32px;
-
+  border-radius: 50%;
   background: var(--grey-2);
 }
 
@@ -39,18 +36,21 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
+  width: 100%;
 }
 
 .skeleton__line {
-  width: 176px;
   height: 20px;
   background: var(--skeleton-gradient);
 }
 
-.skeleton__line_w256 {
-  width: 256px;
+.skeleton__line_40pr {
+  width: 40%;
+}
+.skeleton__line_60pr {
+  width: 60%;
 }
 
-.skeleton__line_w512 {
-  width: 512px;
+.skeleton__line_100pr {
+  width: 100%;
 }

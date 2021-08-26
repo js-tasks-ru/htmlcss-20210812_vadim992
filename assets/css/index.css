@@ -37,6 +37,8 @@
     --main-bg: #F9FAFC;
     --skeleton-gradient: linear-gradient(92.51deg, #DDE2E5 6.44%, #E2E6E8 38.47%, #F3F5F5 56.48%, #E3E7EA 77.5%, #DDE2E5 102.52%);
 
+    --page-component-bg: var(--grey-1);
+
 }
 
 * {
@@ -55,4 +57,8 @@ ul {
 
 li {
     list-style-type: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
 }

@@ -18,6 +18,10 @@
   color: var(--grey-3);
 }
 
+.menu__item_link {
+  font-family: var(--ff-secondary);
+}
+
 .menu__item_active {
   color: var(--black);
 }

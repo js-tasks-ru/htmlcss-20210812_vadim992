@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Example Web App</title>
+  <link rel="stylesheet" href="../assets/css/normalize.css">
+  <link rel="stylesheet" href="../assets/css/index.css">
+  <link rel="stylesheet" href="../components/page/page.css">
+  <link rel="stylesheet" href="../components/main/main.css">
+  <link rel="stylesheet" href="../components/header/header.css">
+  <link rel="stylesheet" href="../components/nav/nav.css">
+  <link rel="stylesheet" href="../components/menu/menu.css">
+  <link rel="stylesheet" href="../components/xmenu/xmenu.css">
+</head>
+<body>
+  <div class="page page_component">
+    <div class="page__header page__box">
+      <div class="header header_grey header__top-panel">
+        <a href="/">
+          <div class="header__logo">
+              <svg width="110" height="32" viewBox="0 0 110 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect y="1" width="30" height="30" fill="#212429"/>
+                  <rect x="38" width="32" height="32" rx="16" fill="#212429"/>
+                  <path d="M78 0L110 32H78V0Z" fill="#212429"/>
+              </svg>
+          </div>
+        </a>
+        <div class="header__nav">
+            <div class="nav">
+                <ul class="menu menu_gap24">
+                    <li class="menu__item menu__item_active">Components</li>
+                    <li class="menu__item">About</li>
+                    <li class="menu__item">Contact</li>
+                </ul>
+                <div class="nav__controls">
+                    <span>controls</span>   <!-- sun toggle moon -->
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="page__main page__box">
+      <div class="xmenu"></div>
+      <div class="component"></div>
+    </div>
+    <div class="page__footer">
+      <h5 class="page__footer-title">Reusable component library</h5>
+    </div>
+  </div>
+
+</body>
+</html>

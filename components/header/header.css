@@ -4,6 +4,10 @@
   background-color: var(--white);
 }
 
+.header_grey {
+  background-color: var(--page-component-bg);
+}
+
 .header__title {
   padding-top: 40px;
   padding-bottom: 40px;

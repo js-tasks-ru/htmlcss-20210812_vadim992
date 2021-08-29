@@ -11,6 +11,7 @@
     --grey-2: #DDE2E5;
     --grey-3: #ACB5BD;
     --grey-4: #495057;
+    --grey-5: #334D6E;
 
     --error: var(--red);
     --success: var(--blue);
@@ -32,12 +33,14 @@
     --transition-button: opacity 200ms ease-in-out, background 200ms ease-in-out;
 
     --ff-secondary: 'Inter', sans-serif;
+    --ff-tertiary: 'Source Sans Pro', sans-serif;
     --border-dark: var(--grey-3);
 
     --main-bg: #F9FAFC;
     --skeleton-gradient: linear-gradient(92.51deg, #DDE2E5 6.44%, #E2E6E8 38.47%, #F3F5F5 56.48%, #E3E7EA 77.5%, #DDE2E5 102.52%);
 
     --page-component-bg: var(--grey-1);
+    --calendar-item-between-active-bg: rgba(160, 177, 245, 0.2);
 
 }
 

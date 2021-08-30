@@ -42,6 +42,7 @@
     --page-component-bg: var(--grey-1);
     --calendar-item-between-active-bg: rgba(160, 177, 245, 0.2);
     --tolltip-box-shadow-color: rgba(33, 36, 41, 0.05);
+    --bg-grey: rgb(77%, 77%, 77%, 0.5);
 
 }
 

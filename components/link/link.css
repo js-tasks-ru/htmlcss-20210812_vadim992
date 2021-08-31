@@ -1,7 +1,9 @@
-/* Стилизация кнопки */
-.button {
-  width: 189px;
-  height: 48px;
+.link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  padding: 15px 50px;
   border-radius: 8px;
   border: none;
 
@@ -9,46 +11,42 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
-
-  text-align: center;
+  text-decoration: none;
 
   cursor: pointer;
   transition: var(--transition-button);
 }
 
-.button:disabled {
+.link:disabled {
   opacity: 0.5;
   pointer-events: none;
 }
 
-/* primary */
-.button_primary {
+.link_primary {
   color: var(--primary-text);
   background-color: var(--primary);
 }
 
-.button_primary:hover {
+.link_primary:hover {
   background-color: var(--primary-hover);
 }
 
-/* secondary */
-.button_secondary {
+.link_secondary {
   color: var(--secondary-text);
   background-color: var(--secondary);
 }
 
-.button_secondary:hover {
+.link_secondary:hover {
   background-color: var(--secondary-hover);
 }
 
-/* alternate */
-.button_alternate {
+.link_alternate {
   color: var(--alternate-text);
   background-color: var(--alternate);
   border: 1px solid var(--alternate-border);
 }
 
-.button_alternate:hover {
+.link_alternate:hover {
   background-color: var(--alternate-hover);
   border: 1px solid var(--alternate-hover-border);
 }

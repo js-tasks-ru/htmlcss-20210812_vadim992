@@ -1,7 +1,7 @@
 /* Стилизация кнопки */
 .button {
-  width: 189px;
-  height: 48px;
+  max-width: 192px;
+  padding: 15px 50px;
   border-radius: 8px;
   border: none;
 
@@ -11,6 +11,7 @@
   line-height: 19px;
 
   text-align: center;
+  text-decoration: none;
 
   cursor: pointer;
   transition: var(--transition-button);

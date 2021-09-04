@@ -23,14 +23,19 @@ https://course-htmlcss.javascript.ru/#
 <body class="page">
     <header class="header page__box">
         <div class="header__top-panel">
-            <div class="header__logo">
-                <svg class="header__logo" width="110" height="32">
-                  <use xlink:href="../../assets/images/sprite.svg#logo"></use>
-                </svg>
-            </div>
+
+            <a href="#" class="header__mobil-menu-switch">
+              <svg class="header__mobil-menu-switch" width="24" height="24">
+                <use xlink:href="../../assets/images/sprite.svg#menu"></use>
+              </svg>     
+            </a>
+
+            <svg class="header__logo" width="110" height="32">
+              <use xlink:href="../../assets/images/sprite.svg#logo"></use>
+            </svg>
             <div class="header__nav">
                 <div class="nav">
-                    <ul class="menu menu_gap24">
+                    <ul class="menu menu_top">
                         <li class="menu__item menu__item_active"><a class="menu__item_link" href="pages/template.html">Components</a></li>
                         <li class="menu__item">About</li>
                         <li class="menu__item">Contact</li>
@@ -42,7 +47,7 @@ https://course-htmlcss.javascript.ru/#
             </div>
         </div>
         <h1 class="header__title">Reusable component library</h1>
-        <ul class="menu menu_gap40">
+        <ul class="menu menu_bottom">
             <li class="menu__item menu__item_active">All components</li>
             <li class="menu__item">Elements</li>
             <li class="menu__item">Containers</li>

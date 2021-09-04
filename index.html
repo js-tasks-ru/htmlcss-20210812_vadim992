@@ -41,7 +41,15 @@ https://course-htmlcss.javascript.ru/#
                         <li class="menu__item">Contact</li>
                     </ul>
                     <div class="nav__controls">
-                        <span>controls</span>   <!-- sun toggle moon -->
+                        <svg class="nav__controls-item" width="24" height="24">
+                          <use xlink:href="../../assets/images/sprite.svg#sun"></use>
+                        </svg>
+                        <svg class="nav__controls-item" width="52" height="28">
+                          <use xlink:href="../../assets/images/sprite.svg#toggle-off"></use>
+                        </svg>
+                        <svg class="nav__controls-item" width="24" height="24">
+                          <use xlink:href="../../assets/images/sprite.svg#moon"></use>
+                        </svg>
                     </div>
                 </div>
             </div>
@@ -49,9 +57,9 @@ https://course-htmlcss.javascript.ru/#
         <h1 class="header__title">Reusable component library</h1>
         <ul class="menu menu_bottom">
             <li class="menu__item menu__item_active">All components</li>
-            <li class="menu__item">Elements</li>
-            <li class="menu__item">Containers</li>
-            <li class="menu__item">Templates</li>
+            <li class="menu__item">Atoms</li>
+            <li class="menu__item">Molecules</li>
+            <li class="menu__item">Organisms</li>
         </ul>     
     </header>
     <main class="main">

@@ -2,27 +2,40 @@
 <!-- Страница с аккордеоном -->
 <html lang="ru">
     <head>
-        <link rel="stylesheet" href="../../assets/css/main.css">
+        <link rel="stylesheet" href="../../assets/css/index.css">
+        <link rel="stylesheet" href="../../components/block/block.css">
         <link rel="stylesheet" href="./accordion.css">
     </head>
     <body>
         <div class="block">
-            <details class="accordion block__accordion" open>
-                <summary class="accordion__title">Accordion item 1</summary>
+            <details class="accordion block__item" open>
+              <summary class="accordion__title">Accordion item 1
+                <svg class="accordion__icon" width="24" height="24">
+                  <use xlink:href="../../assets/images/sprite.svg#arrow-down"></use>
+                </svg>
+              </summary>
+              <p class="accordion__text">
+                Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+              </p>
+            </details>
+            
+            <details class="accordion block__item">
+                <summary class="accordion__title">Accordion item 2
+                  <svg class="accordion__icon" width="24" height="24">
+                    <use xlink:href="../../assets/images/sprite.svg#arrow-down"></use>
+                  </svg>
+                </summary>
                 <p class="accordion__text">
                     Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
                 </p>
             </details>
             
-            <details class="accordion block__accordion">
-                <summary class="accordion__title">Accordion item 2</summary>
-                <p class="accordion__text">
-                    Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
-                </p>
-            </details>
-            
-            <details class="accordion block__accordion">
-                <summary class="accordion__title">Accordion item 3</summary>
+            <details class="accordion block__item">
+                <summary class="accordion__title">Accordion item 3
+                  <svg class="accordion__icon" width="24" height="24">
+                    <use xlink:href="../../assets/images/sprite.svg#arrow-down"></use>
+                  </svg>
+                </summary>
                 <p class="accordion__text">
                     Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
                 </p>

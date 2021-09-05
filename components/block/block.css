@@ -1,0 +1,13 @@
+.block {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.block__item {
+  margin-bottom: 8px;
+}
+
+.block__item:last-child {
+  margin-bottom: 0;
+}

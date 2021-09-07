@@ -7,13 +7,13 @@
 
   font-size: 16px;
   line-height: 24px;
-
-  position: relative;
 }
 
 .accordion__title {
   display: block;
   font-family: var(--ff-secondary);
+  display: flex;
+  justify-content: space-between;
 }
 
 .accordion__title::-webkit-details-marker {
@@ -24,10 +24,20 @@
   font-family: var(--ff-secondary);
 }
 
-.block__accordion {
-  margin-bottom: 8px;
+.accordion[open] .accordion__icon {
+  transform: rotate(180deg);
+  transition: rotate 1.2s ease-out;
 }
 
-.block__accordion:last-child {
-  margin-bottom: 0;
+.accordion__icon {
+  transition: rotate 1.2s ease-out;
+}
+
+.accordion[open] .accordion__title ~ * {
+  animation: sweep .5s ease-in-out;
+}
+
+@keyframes sweep {
+  0%    {opacity: 0; margin-left: -10px}
+  100%  {opacity: 1; margin-left: 0px}
 }

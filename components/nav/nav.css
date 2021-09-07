@@ -4,5 +4,19 @@
 }
 
 .nav__controls {
-  padding-left: 56px;
+  margin-left: 56px;
+  display: flex;
+  align-items: center;
+  color: var(--grey-3);
+  fill: var(--white);
+}
+
+.nav__controls-item {
+  margin-right: 12px;
+}
+.nav__controls-item:last-child {
+  margin-right: 0;
+}
+.nav__controls-item:hover {
+  cursor: pointer;
 }

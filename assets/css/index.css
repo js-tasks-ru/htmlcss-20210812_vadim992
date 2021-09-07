@@ -12,6 +12,7 @@
     --grey-3: #ACB5BD;
     --grey-4: #495057;
     --grey-5: #334D6E;
+    --grey-6: #495057;
 
     --error: var(--red);
     --success: var(--blue);
@@ -41,7 +42,7 @@
 
     --page-component-bg: var(--grey-1);
     --calendar-item-between-active-bg: rgba(160, 177, 245, 0.2);
-    --tolltip-box-shadow-color: rgba(33, 36, 41, 0.05);
+    --box-shadow-color: rgba(33, 36, 41, 0.05);
     --bg-grey: rgb(77%, 77%, 77%, 0.5);
 
 }

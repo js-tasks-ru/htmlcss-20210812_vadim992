@@ -1,6 +1,12 @@
 .preview {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 16px;
+}
 
+@media (min-width: 768px) {
+  .preview {
+    gap: 30px;
+  } 
 }

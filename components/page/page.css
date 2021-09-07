@@ -4,8 +4,7 @@
 }
 
 .page__box {
-  max-width: 304px;
-  width: 100%;
+  width: calc(100% - 8px);
   margin: 0 auto;
 }
 
@@ -58,14 +57,13 @@
 
 @media (min-width: 356px) {
   .page__box {
-    max-width: 90%;
+    width: calc(100% - 16px);
   }
 }
 
 @media (min-width: 768px) {
   .page__box {
     max-width: 1110px;
-    width: 96%;
   }
 
   .page_component {

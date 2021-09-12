@@ -41,6 +41,9 @@
 }
 
 /* наведении курсора */
+.radio__input:not(:disabled):not(.radio_disabled):not(:checked) + .radio__label:hover {
+  cursor: pointer;
+}
 .radio__input:not(:disabled):not(.radio_disabled):not(:checked) + .radio__label:hover::before {
   border-color: var(--grey-3);
 }

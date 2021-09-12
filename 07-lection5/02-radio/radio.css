@@ -1,0 +1,89 @@
+.radio {
+  line-height: 0;
+  position: relative;
+}
+
+.radio__input {
+  position: absolute;
+  opacity: 0;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  z-index: -1;
+}
+
+.radio__label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+
+  font-family: var(--ff-secondary);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--grey-4);
+}
+
+/* состояние радиокнопки по умолчанию (default) */
+.radio__label::before {
+  content: '';
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid var(--grey-2);
+  border-radius: 50%;
+  margin-right: 12px;
+  box-sizing: border-box;
+}
+
+/* наведении курсора */
+.radio__input:not(:disabled):not(.radio_disabled):not(:checked) + .radio__label:hover::before {
+  border-color: var(--grey-3);
+}
+
+/* активная радиокнопка, при нажатии */
+.radio__input:not(:disabled):not(.radio_disabled):active + .radio__label::before {
+  background-color: var(--grey-1);
+}
+
+/* надпись радиокнопки в фокусе */
+.radio__input:not(:disabled):not(.radio_disabled):focus + .radio__label {
+  text-decoration: underline;
+}
+
+/* радиокновка выбрана (checked) - внешняя часть */
+.radio__input:not(:disabled):not(.radio_disabled):checked + .radio__label::before {
+  background-color: var(--white);
+  border: 2px solid var(--blue);
+}
+
+/* радиокновка выбрана (checked) - внутренняя часть */
+.radio__input:not(:disabled):not(.radio_disabled):checked + .radio__label::after {
+  position: absolute;
+  content: '';
+  top: 5px;
+  left: 5px;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border-radius: 50%;
+  background: var(--blue);
+}
+
+/* радиокнопка в состоянии disabled */
+.radio__input.radio_disabled+ .radio__label::before,
+.radio__input:disabled + .radio__label::before {
+  background-color: var(--grey-2);
+}
+
+/* надпись радиокнопки в состоянии disabled */
+.radio__input.radio_disabled + .radio__label,
+.radio__input:disabled + .radio__label {
+  color: var(--grey-2);
+}

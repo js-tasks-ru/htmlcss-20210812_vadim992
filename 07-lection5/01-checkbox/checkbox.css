@@ -80,7 +80,7 @@
 }
 
 /* this outline around checkbox */
-.checkbox__input:focus ~ .checkbox__state .checkbox__control::after {
+/* .checkbox__input:focus ~ .checkbox__state .checkbox__control::after {
   content: '';
   display: block;
   position: absolute;
@@ -90,4 +90,9 @@
   right: -5px;
   border-radius: 8px;
   border: 4px solid var(--outline-color);
+} */
+
+.checkbox__input:focus ~ .checkbox__state .checkbox__control {
+  outline: 4px solid var(--outline-color);
+  outline-offset: 2px;
 }

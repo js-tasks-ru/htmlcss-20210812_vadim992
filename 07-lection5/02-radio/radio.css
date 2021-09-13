@@ -68,13 +68,9 @@
 .radio__input:not(:disabled):not(.radio_disabled):checked + .radio__label::after {
   position: absolute;
   content: '';
-  top: 5px;
   left: 5px;
-  display: inline-block;
   width: 18px;
   height: 18px;
-  flex-shrink: 0;
-  flex-grow: 0;
   border-radius: 50%;
   background: var(--blue);
 }

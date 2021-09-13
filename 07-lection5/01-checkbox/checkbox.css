@@ -93,6 +93,10 @@
 } */
 
 .checkbox__input:focus ~ .checkbox__state .checkbox__control {
-  outline: 4px solid var(--outline-color);
-  outline-offset: 2px;
+ /* Visible in the full-colour space */
+ box-shadow: 0px 0px 5px 5px var(--outline-color);
+ /* Visible in Windows high-contrast themes */
+ outline-color: transparent;
+ outline-width: 2px;
+ outline-style: dotted;
 }

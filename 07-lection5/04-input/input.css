@@ -1,0 +1,41 @@
+.input {
+  display: flex;
+  flex-direction: column;
+}
+
+.input__label, .input__status {
+  font-family: var(--ff-secondary);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--grey-3);
+}
+
+.input__status {
+  font-size: 8px;
+  line-height: 14px;
+}
+
+.input__block {
+  display: flex;
+  position: relative;
+}
+
+.input__input {
+  width: 350px;
+  background: var(--white);
+  border: 1px solid var(--grey-2);
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.input__icon {
+  position: absolute;
+  top: 0;
+  right: 18px;
+  width: 24px;
+  height: 24px;
+}
+

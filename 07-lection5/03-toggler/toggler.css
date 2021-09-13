@@ -70,8 +70,6 @@
 
 /* toggler в состоянии checked - сердцевина */
 .toggler__input:checked + .toggler__label::after {
-  position: absolute;
-  content: '';
   left: 26px;
   background-color: var(--white);
 }

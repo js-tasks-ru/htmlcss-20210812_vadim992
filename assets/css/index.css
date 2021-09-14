@@ -37,13 +37,17 @@
     --ff-tertiary: 'Source Sans Pro', sans-serif;
     --border-dark: var(--grey-3);
 
-    --main-bg: #F9FAFC;
+    --main-bg: var(--white);
+    --main-section-bg: #F9FAFC;
     --skeleton-gradient: linear-gradient(92.51deg, #DDE2E5 6.44%, #E2E6E8 38.47%, #F3F5F5 56.48%, #E3E7EA 77.5%, #DDE2E5 102.52%);
 
     --page-component-bg: var(--grey-1);
     --calendar-item-between-active-bg: rgba(160, 177, 245, 0.2);
     --box-shadow-color: rgba(33, 36, 41, 0.05);
     --bg-grey: rgb(77%, 77%, 77%, 0.5);
+    --outline-color: #769CE4;
+    --label-color: var(--grey-6);
+    --border-input-color: var(--grey-2);
 
 }
 

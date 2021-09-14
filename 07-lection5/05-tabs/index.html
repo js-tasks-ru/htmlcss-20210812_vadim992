@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+  <link rel="stylesheet" href="../../assets/css/normalize.css">
+  <link rel="stylesheet" href="../../assets/css/index.css">
+  <link rel="stylesheet" href="./tabs.css">
+  <style>
+    body {
+        display: flex;
+        justify-content: center;
+        padding-top: 10%;
+    }
+    .wrapper {
+      width: 80%;
+      height: 60%;
+      border: 1px dotted var(--grey-2);
+      border-radius: 8px;
+    }
+    .box {
+      width: 100%;
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+</style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="tabs">
+      <input class="tabs__input" type="radio" name="tabs-nav" id="#all-tab" checked>
+      <input class="tabs__input" type="radio" name="tabs-nav" id="#atoms-tab">
+      <input class="tabs__input" type="radio" name="tabs-nav" id="#simple-tab">
+  
+      <div class="tabs__scroller box">
+          <label class="tabs__label" for="#all-tab">All components</label>
+          <label class="tabs__label" for="#atoms-tab">Complex</label>
+          <label class="tabs__label" for="#simple-tab">Simple</label>
+      </div>
+  
+      <div class="tabs__content tabs__content_complex box">
+          <h4>Сложные компоненты</h4>
+          <p>Компонент .. 1</p>
+          <p>Компонент .. 2</p>
+      </div>
+      <div class="tabs__content box tabs__content_simple box">
+          <h4>Простые компоненты</h4>
+          <p>Компонент .. 1</p>
+          <p>Компонент .. 2</p>
+          <p>Компонент .. 3</p>
+          <p>Компонент .. 4</p>
+          <p>Компонент .. 5</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

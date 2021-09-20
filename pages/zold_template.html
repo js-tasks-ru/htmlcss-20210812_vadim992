@@ -5,10 +5,18 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Simple Example Web App</title>
+  <!-- <link rel="stylesheet" href="../assets/css/normalize.css">
+  <link rel="stylesheet" href="../assets/css/index.css">
+  <link rel="stylesheet" href="../components/page/page.css">
+  <link rel="stylesheet" href="../components/main/main.css">
+  <link rel="stylesheet" href="../components/header/header.css">
+  <link rel="stylesheet" href="../components/nav/nav.css">
+  <link rel="stylesheet" href="../components/menu/menu.css">
+  <link rel="stylesheet" href="../components/xmenu/xmenu.css"> -->
+
   <link rel="stylesheet" href="../dist/styles.css">
 </head>
 <body>
-  <h1 class="available-hidden">Reusable component library sources</h1>
   <div class="page page_component">
     <header class="page__header page__box">
       <div class="header header_grey header__top-panel">
@@ -31,24 +39,24 @@
                     <li class="menu__item">Contact</li>
                 </ul>
                 <div class="nav__controls">
-                  <svg id="sun" class="nav__controls-item" width="24" height="24">
+                  <svg class="nav__controls-item" width="24" height="24">
                     <use xlink:href="../src/images/sprite.svg#sun"></use>
                   </svg>
-                  <label class="toggler">
-                    <input class="toggler__input" type="checkbox" name="toggler" value="1">
-                    <span class="toggler__label"></span>
-                  </label>
-                  <svg id="moon" class="nav__controls-item" width="24" height="24">
+                  <svg class="nav__controls-item" width="52" height="28">
+                    <use xlink:href="../src/images/sprite.svg#toggle-off"></use>
+                  </svg>
+                  <svg class="nav__controls-item" width="24" height="24">
                     <use xlink:href="../src/images/sprite.svg#moon"></use>
                   </svg>
               </div>
+
             </div>
         </div>
       </div>
     </header>
     <main class="page__main page__box">
       <aside class="sidebar">
-        <h3 class="sidebar__title">Components</h3>
+        <h4 class="sidebar__title">Components</h4>
         <nav>
           <ul>
             <li class="sidebar__item sidebar__item_active"><a class="sidebar__link" href="./modal.html">Modal</a></li>
@@ -61,33 +69,18 @@
         </nav>
       </aside>
       <section class="component">
-        <h2 class="component__title">Title..</h2>
-        <section class="component__wrapper">
-          <!---->
-          this component
-          <!---->
-        </section>
+        <h3 class="component__title">Title</h3>
+        <div class="component__wrapper">
           <div class="component__tabs tabs">
-            <div class="tabs tabs_white">
-              <input class="tabs__input" type="radio" name="tabs-nav" id="#tab1" checked>
-              <input class="tabs__input" type="radio" name="tabs-nav" id="#tab2">
-              <div class="tabs__scroller">
-                <label class="tabs__label" for="#tab1">HTML</label>
-                <label class="tabs__label" for="#tab2">CSS</label>
-              </div>
-              <div class="tabs__content tabs__content_1">
-                  Tab1
-              </div>
-              <div class="tabs__content tabs__content_2">
-                  Tab2
-              </div>
+
           </div>
+        </div>
       </section>
     </main>
     <footer class="page__footer">
-      <h4 class="page__footer-title">Reusable component library</h4>
+      <h5 class="page__footer-title">Reusable component library</h5>
     </footer>
   </div>
-  <script src="../src/js/toggler.js"></script>
+
 </body>
 </html>

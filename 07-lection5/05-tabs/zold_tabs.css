@@ -59,13 +59,9 @@
   padding-top: 16px;
 }
 
-.tabs__input.tabs__input_all:checked ~ .tabs__content {
-  display: block;
-}
-
-.tabs__input:nth-child(1):checked ~ .tabs__content_1,
-.tabs__input:nth-child(2):checked ~ .tabs__content_2,
-.tabs__input:nth-child(3):checked ~ .tabs__content_3 {
+.tabs__input:nth-child(1):checked ~ .tabs__content,
+.tabs__input:nth-child(2):checked ~ .tabs__content_complex,
+.tabs__input:nth-child(3):checked ~ .tabs__content_simple {
   display: block;
 }
 

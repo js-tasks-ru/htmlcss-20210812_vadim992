@@ -1,0 +1,15 @@
+/* блок */
+.block {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  
+  &__item {
+    margin-bottom: 8px;
+  }
+  
+  &__item:last-child {
+    margin-bottom: 0;
+  }
+}
+

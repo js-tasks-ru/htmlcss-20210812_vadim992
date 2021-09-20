@@ -61,10 +61,28 @@
         </nav>
       </aside>
       <section class="component">
-        <h2 class="component__title">Title..</h2>
+        <h2 class="component__title">Modal</h2>
         <section class="component__wrapper">
           <!---->
-          this component
+          <a id="modal-open" class="button button_primary" href="#modal">Open modal</a>
+          <div id="modal" class="modal">
+            <div class="modal__window">
+              <a id="modal-close" href="#" title="Close" class="modal__close">
+                <svg class="modal__svg-icon">
+                  <use xlink:href="../../assets/images/sprite.svg#cross"></use>
+                </svg>          
+              </a>
+              <div class="modal__body">
+                <div class="modal__body-title">
+                  Modal title
+                </div>
+                <div class="modal__body-text">
+                  Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.<br />
+                  Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                </div>
+              </div>
+            </div>
+          </div> 
           <!---->
         </section>
           <div class="component__tabs tabs">
@@ -76,7 +94,10 @@
                 <label class="tabs__label" for="#tab2">CSS</label>
               </div>
               <div class="tabs__content tabs__content_1">
-                  Tab1
+                <figure>
+                  <pre>
+                  </pre>
+                </figure>
               </div>
               <div class="tabs__content tabs__content_2">
                   Tab2

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modal</title>
+  <!-- <link rel="stylesheet" href="../../assets/css/normalize.css">
+  <link rel="stylesheet" href="../../assets/css/index.css">
+  <link rel="stylesheet" href="../../components/button/button.css">
+  <link rel="stylesheet" href="./modal.css"> -->
+  <link rel="stylesheet" href="../dist/styles.css">
+</head>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+  }
+</style>
+
+<body>
+  <a id="modal-open" class="button button_primary" href="#modal">Open modal</a>
+
+  <div id="modal" class="modal">
+    <div class="modal__window">
+      <a id="modal-close" href="#" title="Close" class="modal__close">
+        <svg class="modal__svg-icon">
+          <use xlink:href="../src/images/sprite.svg#cross"></use>
+        </svg>          
+      </a>
+      <div class="modal__body">
+        <div class="modal__body-title">
+          Modal title
+        </div>
+        <div class="modal__body-text">
+          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.<br />
+          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+        </div>
+      </div>
+    </div>
+  </div> 
+</body>
+<script src="../src/js/modal.js"></script> 
+</html>

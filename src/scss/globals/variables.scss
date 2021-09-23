@@ -49,8 +49,18 @@
 
     --component-menu-header: #000000;
     --component-menu-hover: #000000;
-    --notificaiton: #D84910;
     --component-title-text: var(--grey-4);
+
+    --notification: #D84910;
+    --mob-menu-width: 440px;
+    --mob-menu-bg: #F9FAFC;
+    --mob-menu-parent-bg: rgba(0,0,0,0.5);
+
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
 
 }
 

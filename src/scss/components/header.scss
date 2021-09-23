@@ -1,8 +1,13 @@
 /* Заголовок */
 .header {
+  $breakpoint-md: 768px;
   padding-top: 17px;
   padding-bottom: 17px;
   background-color: var(--white);
+  @media (min-width: $breakpoint-md) { /* >= 768 */
+    padding-top: 25px;
+    padding-bottom: 13px;
+  }
 
   &__title {
     padding-top: 48px;
@@ -14,19 +19,40 @@
     font-size: 28px;
     line-height: 38px;
     color: var(--grey-4);
+
+    @media (min-width: $breakpoint-md) {
+      padding-top: 40px;
+      padding-bottom: 40px;
+      font-weight: 500;
+      font-size: 50px;
+      line-height: 64px;
+      color: var(--black);
+    }
   }
   
   &__link-main {
     margin: 0 auto;
+
+    @media (min-width: $breakpoint-md) {
+      margin: 0;
+    }
   }
   
   &__logo {
     margin: 0 auto;
     color: var(--black);
+
+    @media (min-width: $breakpoint-md) {
+      margin: 0;
+    }
   }
   
   &__nav {
     display: none;
+
+    @media (min-width: $breakpoint-md) {
+      display: inline-block;
+    }
   }
   
   &_grey {
@@ -40,41 +66,26 @@
     position: relative;  
   }
   
-  &__mobil-menu-switch {
+  &__mob-menu-open {
     position: absolute;
-    left: 0;
+    left: 8px;
     top: 50%;
     transform: translate(0, -50%);
     cursor: pointer;
+    border: none;
+    padding: 0;
+    width: 24px;
+    height: 24px;
     color: var(--grey-6);
+    background-color: var(--mob-menu-bg);
+    @media (min-width: $breakpoint-md) {
+      display: none;
+    }
   }
-  
-}
 
-@media (min-width: 768px) { /* >= 768 */
-  .header {
-    padding-top: 25px;
-    padding-bottom: 13px;
-  }
-  .header__title {
-    padding-top: 40px;
-    padding-bottom: 40px;
-  
-    font-weight: 500;
-    font-size: 50px;
-    line-height: 64px;
-    color: var(--black);
-  }
-  .header__link-main {
-    margin: 0;
-  }
-  .header__logo {
-    margin: 0;
-  }
-  .header__nav {
-    display: inline-block;
-  }
-  .header__mobil-menu-switch {
-    display: none;
+  &__mob-menu-open-icon {
+    width: 24px;
+    height: 24px;
+    color: var(--grey-4);
   }
 }

@@ -1,0 +1,138 @@
+.mob-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  max-width: var(--mob-menu-width);
+  height: 100vh;
+  background-color: var(--mob-menu-bg);
+  transform: translateX(-100vw);
+  transition: transform 0.25s ease-in-out;
+  overflow: auto;
+  z-index: 2;
+}
+
+.mob-menu[data-open] {
+  transform: translateX(0);
+  max-width: var(--mob-menu-width);
+  width: 100%;
+}
+
+.mob-menu[data-open] + .mob-menu__context-background {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  transition: all 0.25s;
+  background-color: var(--mob-menu-parent-bg);
+  
+  // pointer-events: none;
+  z-index: 1;
+}
+
+.mob-menu__open {
+  border: none;
+  background-color: var(--mob-menu-bg);
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  margin-top: 16px;
+  margin-left: 4px;
+}
+
+.mob-menu__close {
+  cursor: pointer;
+}
+
+.mob-menu__close {
+  border: none;
+  width: 0;
+  height: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.mob-menu__header {
+  display: flex;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  position: relative;
+}
+
+.mob-menu__icon-logo {
+  width: 110px;
+  height: 32px;
+  margin: 0 auto;
+  color: var(--black);
+}
+
+.mob-menu__icon-close {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 12px;
+  width: 32px;
+  height: 32px;
+  color: var(--black);
+}
+
+.mob-menu__divider {
+  border-bottom: 1px solid var(--grey-2);
+}
+
+.mob-menu__control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.mob-menu__mode, 
+.mob-menu__title, 
+.mob-menu__link {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.mob-menu__mode {
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--grey-4);
+}
+
+.mob-menu__title {
+  display: block;
+  font-size: 20px;
+  line-height: 26px;
+  color: var(--grey-3);
+  padding-top: 24px;
+  padding-bottom: 16px;
+}
+
+.mob-menu__item {
+  margin-bottom: 16px;
+}
+
+.mob-menu__item:last-child{
+  margin-bottom: 0;
+}
+
+.mob-menu__link {
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--black);
+  text-decoration: none;
+}
+
+.mob-menu__link:hover {
+  color: lighten($color: #000000, $amount: 50%);
+}
+
+.mob-menu__link:active,
+.mob-menu__link_active {
+  color: var(--notification);
+}

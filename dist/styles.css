@@ -824,6 +824,7 @@ a {
   box-shadow: 0px 2px 4px var(--box-shadow-color);
   border-radius: 12px;
   padding: 32px 16px 32px 48px;
+  overflow: hidden;
 }
 
 .component__title {
@@ -943,6 +944,12 @@ a {
   border-bottom: 1px solid var(--grey-2);
 }
 
+.tabs__code {
+  white-space: pre;
+  overflow-x: auto;
+  margin: 0;
+}
+
 @media (min-width: 356px) {
   .tabs__scroller {
     flex-direction: row;
@@ -1040,7 +1047,6 @@ a {
   display: inline-block;
   width: 52px;
   height: 28px;
-  margin-right: 12px;
   flex-shrink: 0;
   flex-grow: 0;
   background: var(--white);

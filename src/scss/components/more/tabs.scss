@@ -29,6 +29,12 @@
   border-bottom: 1px solid var(--grey-2);
 }
 
+.tabs__code {
+  white-space: pre;
+  overflow-x: auto;
+  margin: 0;
+}
+
 @media (min-width: 356px) {
   .tabs__scroller {
     flex-direction: row;

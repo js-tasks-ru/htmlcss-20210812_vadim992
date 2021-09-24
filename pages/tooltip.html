@@ -6,51 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tooltip</title>
   <link rel="stylesheet" href="../dist/styles.css">
-</head>
-<body>
-  <!----- -->
   <style>
-    .a {
-      display: flex;
-      justify-content: space-between;
-      flex-direction: column;
-      flex-wrap: wrap;
-      width: 70%;
-      border: 2px dotted red;
-      
-    }
-    .b {
-      width: 100px;
-      min-height: 100px;
-      height: fit-content;
-      border: 1px solid green;
-      margin-bottom: 10px;
-    }
-    @media (min-width:768px) {
-      .a {
-        flex-direction: row;
-        
-      }
-      .b {
-        margin-bottom: 0;
-      }
+    .component__wrapper {
+      margin-left: 32px;
     }
   </style>
-  <div class="a">
-    <div class="b">
-    </div>
-    <div class="b">
-    </div>
-    <div class="b">
-    </div>
-    <div class="b">
-    </div>
-    <div class="b">
-    </div>
-    <div class="b">
-    </div>
-  </div>
-  <!-- //////////   -->
+</head>
+<body>
   <h1 class="available-hidden">Reusable component library sources</h1>
   <div class="page page_component">
     <header class="page__header page__box">
@@ -69,7 +31,7 @@
                   <use xlink:href="../src/images/sprite.svg#menu-close"></use>
                 </svg>
               </button>
-              <svg class="mob-menu__icon-logo">
+              <svg  width="100" height="100" class="mob-menu__icon-logo">
                 <use xlink:href="../src/images/sprite.svg#logo"></use>
               </svg>
             </div>

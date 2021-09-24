@@ -12,48 +12,11 @@
   <div class="page page_component">
     <header class="page__header page__box">
       <div class="header header_grey header__top-panel">
-        <button id="mob-menu-open" class="header__mob-menu-open">
-          <svg class="header__mob-menu-open-icon">
+        <a href="#" class="header__mobil-menu-switch">
+          <svg class="header__mobil-menu-switch" width="24" height="24">
             <use xlink:href="../src/images/sprite.svg#menu"></use>
-          </svg>
-        </button>
-        <!-- Mobile menu - start -->
-        <section>
-          <div id="mob-menu" class="mob-menu">
-            <div class="mob-menu__header x-p12">
-              <button id="mob-menu-close" class="mob-menu__close">
-                <svg class="mob-menu__icon-close">
-                  <use xlink:href="../src/images/sprite.svg#menu-close"></use>
-                </svg>
-              </button>
-              <svg class="mob-menu__icon-logo">
-                <use xlink:href="../src/images/sprite.svg#logo"></use>
-              </svg>
-            </div>
-            <div class="mob-menu__divider x-m12 x-mt16"></div>
-            <nav class="mob-menu__nav x-p12">
-              <div class="mob-menu__control">
-                <span class="mob-menu__mode">Dark mode</span>
-                <label class="toggler">
-                  <input class="toggler__input" type="checkbox" name="toggler" value="1">
-                  <span class="toggler__label"></span>
-              </label>
-              </div>
-              <div class="mob-menu__divider"></div>
-              <h4 class="mob-menu__title">Components</h4>
-              <ul>
-                <li class="mob-menu__item"><a class="mob-menu__link mob-menu__link_active" href="./modal.html">Modal</a></li>
-                <li class="mob-menu__item"><a class="mob-menu__link" href="./tooltip.html">Tooltip</a></li>
-                <li class="mob-menu__item"><a class="mob-menu__link" href="./avatar.html">Avatar</a></li>
-                <li class="mob-menu__item"><a class="mob-menu__link" href="./calendar.html">Calendar</a></li>
-                <li class="mob-menu__item"><a class="mob-menu__link" href="./histogram.html">Histogram</a></li>
-                <li class="mob-menu__item"><a class="mob-menu__link" href="./form.html">Custom form elements</a></li>
-              </ul>
-            </nav>
-          </div>
-          <div class="mob-menu__context-background"></div>
-        </section> 
-        <!-- Mobile menu - end -->
+          </svg>     
+        </a>
         <a class="header__link-main" href="/">
           <svg class="header__logo" width="110" height="32">
             <use xlink:href="../src/images/sprite.svg#logo"></use>
@@ -89,19 +52,37 @@
         <nav>
           <ul>
             <li class="sidebar__item sidebar__item_active"><a class="sidebar__link" href="./modal.html">Modal</a></li>
-            <li class="sidebar__item"><a class="sidebar__link" href="./tooltip.html">Tooltip</a></li>
-            <li class="sidebar__item"><a class="sidebar__link" href="./avatar.html">Avatar</a></li>
-            <li class="sidebar__item"><a class="sidebar__link" href="./calendar.html">Calendar</a></li>
-            <li class="sidebar__item"><a class="sidebar__link" href="./histogram.html">Histogram</a></li>
-            <li class="sidebar__item"><a class="sidebar__link" href="./form.html">Custom form elements</a></li>
+            <li class="sidebar__item"><a class="sidebar__link" href="">Tooltip</a></li>
+            <li class="sidebar__item"><a class="sidebar__link" href="">Avatar</a></li>
+            <li class="sidebar__item"><a class="sidebar__link" href="">Calendar</a></li>
+            <li class="sidebar__item"><a class="sidebar__link" href="">Histogram</a></li>
+            <li class="sidebar__item"><a class="sidebar__link" href="">Custom form elements</a></li>
           </ul>
         </nav>
       </aside>
       <section class="component">
-        <h2 class="component__title">Title..</h2>
+        <h2 class="component__title">Modal</h2>
         <section class="component__wrapper">
           <!---->
-          this component
+          <a id="modal-open" class="button button_primary" href="#modal">Open modal</a>
+          <div id="modal" class="modal">
+            <div class="modal__window">
+              <a id="modal-close" href="#" title="Close" class="modal__close">
+                <svg class="modal__svg-icon">
+                  <use xlink:href="../../assets/images/sprite.svg#cross"></use>
+                </svg>          
+              </a>
+              <div class="modal__body">
+                <div class="modal__body-title">
+                  Modal title
+                </div>
+                <div class="modal__body-text">
+                  Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.<br />
+                  Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                </div>
+              </div>
+            </div>
+          </div> 
           <!---->
         </section>
           <div class="component__tabs tabs">
@@ -134,6 +115,5 @@
     </footer>
   </div>
   <script src="../src/js/toggler.js"></script>
-  <script src="../src/js/mob-menu.js"></script>
 </body>
 </html>

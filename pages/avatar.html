@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simple Example Web App</title>
+  <title>Avatar</title>
   <link rel="stylesheet" href="../dist/styles.css">
 </head>
 <body>
@@ -42,9 +42,9 @@
               <div class="mob-menu__divider"></div>
               <h4 class="mob-menu__title">Components</h4>
               <ul>
-                <li class="mob-menu__item"><a class="mob-menu__link mob-menu__link_active" href="./modal.html">Modal</a></li>
+                <li class="mob-menu__item"><a class="mob-menu__link" href="./modal.html">Modal</a></li>
                 <li class="mob-menu__item"><a class="mob-menu__link" href="./tooltip.html">Tooltip</a></li>
-                <li class="mob-menu__item"><a class="mob-menu__link" href="./avatar.html">Avatar</a></li>
+                <li class="mob-menu__item"><a class="mob-menu__link mob-menu__link_active" href="./avatar.html">Avatar</a></li>
                 <li class="mob-menu__item"><a class="mob-menu__link" href="./calendar.html">Calendar</a></li>
                 <li class="mob-menu__item"><a class="mob-menu__link" href="./histogram.html">Histogram</a></li>
                 <li class="mob-menu__item"><a class="mob-menu__link" href="./form.html">Custom form elements</a></li>
@@ -88,9 +88,9 @@
         <h3 class="sidebar__title">Components</h3>
         <nav>
           <ul>
-            <li class="sidebar__item sidebar__item_active"><a class="sidebar__link" href="./modal.html">Modal</a></li>
+            <li class="sidebar__item"><a class="sidebar__link" href="./modal.html">Modal</a></li>
             <li class="sidebar__item"><a class="sidebar__link" href="./tooltip.html">Tooltip</a></li>
-            <li class="sidebar__item"><a class="sidebar__link" href="./avatar.html">Avatar</a></li>
+            <li class="sidebar__item sidebar__item_active"><a class="sidebar__link" href="./avatar.html">Avatar</a></li>
             <li class="sidebar__item"><a class="sidebar__link" href="./calendar.html">Calendar</a></li>
             <li class="sidebar__item"><a class="sidebar__link" href="./histogram.html">Histogram</a></li>
             <li class="sidebar__item"><a class="sidebar__link" href="./form.html">Custom form elements</a></li>
@@ -98,10 +98,12 @@
         </nav>
       </aside>
       <section class="component">
-        <h2 class="component__title">Title..</h2>
+        <h2 class="component__title">Avatar</h2>
         <section class="component__wrapper">
           <!---->
-          this component
+          <div class="avatar">
+            <img src="../src/images/avatar-200.jpg" class="avatar__image" alt="Avatar"/>
+          </div>
           <!---->
         </section>
           <div class="component__tabs tabs">
@@ -115,14 +117,26 @@
               <div class="tabs__content tabs__content_1">
                 <pre class="tabs__code">
                   <code>
-                    HTML this
+&lt;div class=&quot;avatar&quot;&gt;
+  &lt;img src=&quot;./public/avatar-200.jpg&quot; class=&quot;avatar__image&quot; alt=&quot;Avatar&quot;/&gt;
+&lt;/div&gt;
                   </code>
                 </pre>
               </div>
               <div class="tabs__content tabs__content_2">
                 <pre class="tabs__code">
                   <code>
-                    CSS this
+.avatar {
+  width: 100px;
+  height: 100px;
+}
+
+.avatar__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
                   </code>
                 </pre>
               </div>

@@ -37,6 +37,7 @@
   }
 }
 
+.tabs_pre,
 .tabs__code {
   white-space: pre;
   overflow-x: auto;

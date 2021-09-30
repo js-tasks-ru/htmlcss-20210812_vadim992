@@ -1,15 +1,30 @@
-/* Меню */
+/* Меню: верхнее (top) и нижнее (bottom) в header */
 .menu {
+  $border-bottom: 5px solid var(--black);
+  
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
-
+ 
   &__item {
     font-family: var(--ff-secondary);
     font-weight: normal;
     font-size: 16px;
     line-height: 24px;
     color: var(--grey-3);
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      padding-bottom: 5px;
+      border-bottom: 5px solid transparent;
+      transform: scaleX(0);
+      transition: transform 0.25s;
+    }
   }
   
   &_bottom > &__item {
@@ -23,29 +38,39 @@
   &__item_link {
     font-family: var(--ff-secondary);
   }
-  
+
+  &__item:hover::after {
+    border-bottom: $border-bottom;
+    transform: scaleX(1);
+  }
+
+  &__item:active,
   &__item_active {
     color: var(--black);
+    &::after {
+      border-bottom: $border-bottom;;
+      transform: scaleX(1);
+    }
+  }
+
+
+  @media (min-width: 356px) {
+    &_top > &__item {
+      margin-right: 16px;
+    }
   }
   
-}
+  @media (min-width: 768px) {
 
-
-@media (min-width: 356px) {
-  .menu_top > .menu__item {
-    margin-right: 16px;
-  }
-}
-
-@media (min-width: 768px) {
-  .menu {
     display: flex;
     justify-content: flex-start;
-  }
-  .menu_top > .menu__item {
-    margin-right: 24px;
-  }
-  .menu_bottom > .menu__item {
-    margin-right: 40px;
+    
+    &_top > &__item {
+      margin-right: 24px;
+    }
+
+    &_bottom > &__item {
+      margin-right: 40px;
+    }
   }
 }

@@ -5,57 +5,78 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Library HTMLCSS components</title>
-  <!-- <link rel="stylesheet" href="./assets/css/normalize.css">
-  <link rel="stylesheet" href="./assets/css/index.css">
-  <link rel="stylesheet" href="./components/page/page.css">
-  <link rel="stylesheet" href="./components/main/main.css">
-  <link rel="stylesheet" href="./components/header/header.css">
-  <link rel="stylesheet" href="./components/footer/footer.css">
-  <link rel="stylesheet" href="./components/nav/nav.css">
-  <link rel="stylesheet" href="./components/menu/menu.css">
-  <link rel="stylesheet" href="./components/preview/preview.css">
-  <link rel="stylesheet" href="./components/card/card.css"> -->
-
   <link rel="stylesheet" href="./dist/styles.css">
 </head>
-<!--
-http://127.0.0.1:5500/
-https://course-htmlcss.javascript.ru/#
--->
 <body class="page">
     <header class="header page__box">
         <div class="header__top-panel">
-
-            <a href="#" class="header__mobil-menu-switch">
-              <svg class="header__mobil-menu-switch" width="24" height="24">
-                <use xlink:href="../../assets/images/sprite.svg#menu"></use>
-              </svg>     
-            </a>
-
-            <svg class="header__logo" width="110" height="32">
-              <use xlink:href="../../assets/images/sprite.svg#logo"></use>
+          <button id="mob-menu-open" class="header__mob-menu-open">
+            <svg class="header__mob-menu-open-icon">
+              <use xlink:href="../src/images/sprite.svg#menu"></use>
             </svg>
-            <div class="header__nav">
-                <div class="nav">
-                    <ul class="menu menu_top">
-                        <li class="menu__item menu__item_active"><a class="menu__item_link" href="pages/template.html">Components</a></li>
-                        <li class="menu__item">About</li>
-                        <li class="menu__item">Contact</li>
-                    </ul>
-                    <div class="nav__controls">
-                        <svg class="nav__controls-item" width="24" height="24">
-                          <use xlink:href="../../assets/images/sprite.svg#sun"></use>
-                        </svg>
-                        <svg class="nav__controls-item" width="52" height="28">
-                          <use xlink:href="../../assets/images/sprite.svg#toggle-off"></use>
-                        </svg>
-                        <svg class="nav__controls-item" width="24" height="24">
-                          <use xlink:href="../../assets/images/sprite.svg#moon"></use>
-                        </svg>
-                    </div>
+          </button>
+          <!-- Mobile menu - start -->
+          <section>
+            <div id="mob-menu" class="mob-menu">
+              <div class="mob-menu__header x-p12">
+                <button id="mob-menu-close" class="mob-menu__close">
+                  <svg class="mob-menu__icon-close">
+                    <use xlink:href="../src/images/sprite.svg#menu-close"></use>
+                  </svg>
+                </button>
+                <svg class="mob-menu__icon-logo">
+                  <use xlink:href="../src/images/sprite.svg#logo"></use>
+                </svg>
+              </div>
+              <div class="mob-menu__divider x-m12 x-mt16"></div>
+              <nav class="mob-menu__nav x-p12">
+                <div class="mob-menu__control">
+                  <span class="mob-menu__mode">Dark mode.</span>
+                  <label class="toggler">
+                    <input class="toggler__input" type="checkbox" name="toggler" value="1">
+                    <span class="toggler__label"></span>
+                </label>
                 </div>
+                <div class="mob-menu__divider"></div>
+                <h4 class="mob-menu__title">Components</h4>
+                <ul>
+                  <li class="mob-menu__item"><a class="mob-menu__link" href="./pages/modal.html">Modal</a></li>
+                  <li class="mob-menu__item"><a class="mob-menu__link" href="./pages/tooltip.html">Tooltip</a></li>
+                  <li class="mob-menu__item"><a class="mob-menu__link" href="./pages/avatar.html">Avatar</a></li>
+                  <li class="mob-menu__item"><a class="mob-menu__link" href="./pages/calendar.html">Calendar</a></li>
+                  <li class="mob-menu__item"><a class="mob-menu__link" href="./pages/histogram.html">Histogram</a></li>
+                  <li class="mob-menu__item"><a class="mob-menu__link" href="./pages/form.html">Custom form elements</a></li>
+                </ul>
+              </nav>
             </div>
-        </div>
+            <div class="mob-menu__context-background"></div>
+          </section> 
+          <!-- Mobile menu - end -->
+          <svg class="header__logo" width="110" height="32">
+            <use xlink:href="../src/images/sprite.svg#logo"></use>
+          </svg>
+          <div class="header__nav">
+              <div class="nav">
+                  <ul class="menu menu_top">
+                      <li class="menu__item menu__item_active"><a class="menu__item_link" href="pages/modal.html">Components</a></li>
+                      <li class="menu__item">About</li>
+                      <li class="menu__item">Contact</li>
+                  </ul>
+                  <div class="nav__controls">
+                    <svg id="sun" class="nav__controls-item" width="24" height="24">
+                      <use xlink:href="../src/images/sprite.svg#sun"></use>
+                    </svg>
+                    <label class="nav__controls-item toggler">
+                      <input class="toggler__input" type="checkbox" name="toggler" value="1">
+                      <span class="toggler__label"></span>
+                    </label>
+                    <svg id="moon" class="nav__controls-item" width="24" height="24">
+                      <use xlink:href="../src/images/sprite.svg#moon"></use>
+                    </svg>
+                  </div>
+              </div>
+          </div>
+        </div>        
         <h1 class="header__title">Reusable component library</h1>
         <ul class="menu menu_bottom">
             <li class="menu__item menu__item_active">All components</li>
@@ -80,5 +101,7 @@ https://course-htmlcss.javascript.ru/#
         This project is a collection of professionally designed, pre-built, fully responsive HTML snippets you can drop into your projects. Get started by checking out our free preview components, or browsing the PNG previews in the categories you're most curious about.
       </p>
     </footer>
+    <script src="../src/js/toggler.js"></script>
+    <script src="../src/js/mob-menu.js"></script>    
 </body>
 </html>

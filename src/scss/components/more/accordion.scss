@@ -9,9 +9,18 @@
 }
 
 .accordion__title {
-  font-family: var(--ff-secondary);
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  font-family: var(--ff-secondary);
+  list-style: none;
+  outline: none;
+}
+
+.accordion__title:focus {
+  border-radius: 2px;
+  padding: 1px 2px;
+  box-shadow: 0px 0px 3px 3px var(--outline-color);
 }
 
 .accordion__title::-webkit-details-marker {

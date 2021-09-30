@@ -29,33 +29,22 @@
 </head>
 <body>
   <div class="wrapper">
-    <div class="tabs">
-      <input class="tabs__input tabs__input_all" type="radio" name="tabs-nav" id="#tab1" checked>
+    <section class="tabs tabs_white">
+      <input class="tabs__input tabs__input_all" type="radio" name="tabs-nav" id="#all-tab" checked>
+      <input class="tabs__input" type="radio" name="tabs-nav" id="#tab1">
       <input class="tabs__input" type="radio" name="tabs-nav" id="#tab2">
-      <input class="tabs__input" type="radio" name="tabs-nav" id="#tab3">
-  
-      <div class="tabs__scroller box">
-          <label class="tabs__label" for="#tab1">Tab1</label>
-          <label class="tabs__label" for="#tab2">Tab2</label>
-          <label class="tabs__label" for="#tab3">Tab3</label>
+      <div class="tabs__scroller">
+        <label class="tabs__label" for="#all-tab">All components</label>
+        <label class="tabs__label" for="#tab1">Tab1</label>
+        <label class="tabs__label" for="#tab2">Tab2</label>
       </div>
-  
-      <div class="tabs__content tabs__content_1 box">
-          <h4>Tab1</h4>
-          <p>Компонент .. 1</p>
+      <div class="tabs__content tabs__content_1">
+        Tab1
       </div>
-      <div class="tabs__content box tabs__content_2 box">
-          <h4>Tab2</h4>
-          <p>Компонент .. 1</p>
-          <p>Компонент .. 2</p>
+      <div class="tabs__content tabs__content_2">
+        Tab2
       </div>
-      <div class="tabs__content box tabs__content_3 box">
-        <h4>Tab3</h4>
-        <p>Компонент .. 1</p>
-        <p>Компонент .. 2</p>
-        <p>Компонент .. 3</p>
-    </div>
-    </div>
+    </section>
   </div>
 </body>
 </html>

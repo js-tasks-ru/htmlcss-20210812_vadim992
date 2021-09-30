@@ -1,11 +1,10 @@
-// reset, fonts
+// reset, fonts, globals
 @import './reset/normalize';
 @import '../fonts/fonts.scss';
 @import './globals/variables';
-// Components
+// components
 @import './components/available-hidden';
-@import './components/block';
-// @import './components/button';
+// @import './components/block';
 @import './components/card';
 @import './components/footer';
 @import './components/header';
@@ -15,7 +14,6 @@
 @import './components/page';
 @import './components/preview';
 @import './components/sidebar';
-
 @import './components/component';
 // more components
 @import './components/more/helpers';
@@ -27,15 +25,9 @@
 @import './components/more/avatar';
 @import './components/more/calendar';
 @import './components/more/histogram';
-
 @import './components/more/radio';
 @import './components/more/checkbox';
 @import './components/more/toggler';
-
 @import './components/more/input';
 @import './components/more/button';
 @import './components/more/accordion';
-
-
-
-

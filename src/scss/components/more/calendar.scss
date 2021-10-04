@@ -4,6 +4,7 @@
   padding: 28px 36px;
   width: 100%;
   max-width: 300px;
+  background-color: var(--main-bg);
 }
 
 .calendar__title {
@@ -14,6 +15,25 @@
   line-height: 24px;
   padding-bottom: 24px;
   color: var(--grey-5);
+}
+
+.calendar_preview {
+  max-width: 200px;
+  padding: 8px 16px;
+  padding: 0;
+}
+
+.calendar_preview .calendar__title,
+.calendar_preview .calendar__item {
+  font-size: 70%;
+}
+
+.calendar_preview .calendar__title {
+  padding-bottom: 0;
+}
+
+.calendar_preview .calendar__item_day {
+  font-size: 50%;
 }
 
 .calendar__item {

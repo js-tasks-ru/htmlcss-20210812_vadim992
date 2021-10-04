@@ -27,7 +27,7 @@
       min-height: 100px;
       height: fit-content;
     }
-    .group__devider {
+    .group_divider {
       width: 100%;
       border: none;
       border-bottom: 1px dotted var(--grey-2);
@@ -41,21 +41,37 @@
       flex-direction: column;
       gap: 8px;
     }
-    .input-wrapper, 
-    .button-wrapper {
+    .input-wrapper {
       display: flex;
       flex-flow: row wrap;
       gap: 8px;
     }
+
+    .button-wrapper {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+
+    @media (min-width: 400px) {
+      .button-wrapper {
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: repeat(2, auto);
+        grid-auto-flow: column;
+      }
+    }
+
     .accordion-wrapper {
       width: 100%;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
     }
+
     .accordion-wrapper__item {
       margin-bottom: 8px;
     }
+    
     .accordion-wrapper__item:last-child {
       margin-bottom: 0;
     }
@@ -242,7 +258,7 @@
               </div>
             </div>
             
-            <div class="group__devider"></div>
+            <div class="group_divider"></div>
 
             <div class="group"> <!-- input -->
               <div class="input-wrapper">
@@ -274,22 +290,20 @@
               </div>
             </div>
 
-            <div class="group__devider"></div>
+            <div class="group_divider"></div>
 
-            <div class="group"> <!-- button -->
-              <div class="button-wrapper">
-                <button class="button button_primary">Primary</button>
-                <button class="button button_primary" disabled>Primary disabled</button>
-              
-                <button class="button button_secondary">Secondary</button>
-                <button class="button button_secondary" disabled>Secondary disabled</button>
-              
-                <button class="button button_alternate">Alternate</button>
-                <button class="button button_alternate" disabled>Alternate disabled</button>
-              </div>
+            <div class="button-wrapper"> <!-- button -->
+              <button class="button button_primary">Primary</button>
+              <button class="button button_primary" disabled>Primary disabled</button>
+            
+              <button class="button button_secondary">Secondary</button>
+              <button class="button button_secondary" disabled>Secondary disabled</button>
+            
+              <button class="button button_alternate">Alternate</button>
+              <button class="button button_alternate" disabled>Alternate disabled</button>
             </div>
 
-            <div class="group__devider"></div>
+            <div class="group_divider"></div>
 
             <div class="group"> <!-- accordion -->
               <div class="accordion-wrapper">

@@ -16,6 +16,7 @@
   display: none;
 }
 
+.tooltip_active .tooltip__help,
 .tooltip__icon:hover + .tooltip__help {
   position: absolute;
   display: inline;

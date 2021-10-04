@@ -1,5 +1,5 @@
 .button {
-  width: 189px;
+  // width: 189px;
   height: 48px;
   border-radius: 8px;
   border: none;
@@ -13,6 +13,8 @@
 
   cursor: pointer;
   transition: var(--transition-button);
+  background-color: transparent;
+  padding: .5em 1em;
 }
 
 .button:disabled {

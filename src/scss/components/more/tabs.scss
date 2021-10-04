@@ -47,7 +47,6 @@
   font-weight: normal;
   font-size: 16px;
   line-height: 24px;
-  text-transform: uppercase;
   margin-bottom: 8px;
 
   color: var(--grey-3);
@@ -80,10 +79,15 @@
 // изначально содержание всех ТАБов скрыто
 .tabs__content {
   display: none;
+  padding-top: 24px;
   padding-bottom: 16px;
   &:last-child {
     padding-bottom: 0;
   }
+}
+
+.tabs__content_grey {
+  background-color: var(--grey-1);
 }
 
 // отображение содержания всех ТАБов при выбре ТАБа с модификатором .tabs__input_all

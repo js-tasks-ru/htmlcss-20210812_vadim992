@@ -26,7 +26,6 @@
   align-items: center;
   width: 100%;
   background-color: var(--white);
-  border-bottom: 1px solid var(--grey-2);
   
   @media (min-width: 356px) {
     flex-direction: row;
@@ -81,6 +80,7 @@
   display: none;
   padding-top: 24px;
   padding-bottom: 16px;
+  border-top: 1px solid var(--grey-2);
   &:last-child {
     padding-bottom: 0;
   }

@@ -1,34 +1,46 @@
 (function() {
   document.addEventListener("DOMContentLoaded", () => {
-    const toggler = document.querySelector('.toggler');
-    const togglerInput = document.querySelector('.toggler__input');
+    const togglerSchema = document.querySelector('#toggler-schema');
+    const togglerInput = togglerSchema.querySelector('.toggler__input');
+    const togglerSchemaModal = document.querySelector('#toggler-schema-modal');
+    const togglerInputModal = togglerSchemaModal.querySelector('.toggler__input');
     const sun = document.querySelector("#sun");
     const moon = document.querySelector("#moon");
     const html = document.querySelector("html");
 
-    const setTheme = () => {
-      const stateIsDark = togglerInput.checked;
-      html.setAttribute('data-mode', stateIsDark ? "dark" : "light");
+    const setTheme = (elActive, elPassive) => {
+      const schema = elActive.checked ? "dark" : "light";
+      html.setAttribute('data-mode', schema);
+      sessionStorage.setItem('schema', schema);
+      if (elPassive) {
+        elPassive.checked = elActive.checked;
+      }
     }
 
-    if (toggler && togglerInput) {
-      toggler.addEventListener("change", () => {
-        togglerInput.toggleAttribute('checked');
-        setTheme();
+    if (togglerSchema && togglerInput) {
+      togglerSchema.addEventListener("change", () => {
+        setTheme(togglerInput, togglerInputModal);
+      })
+    }
+
+    if (togglerSchemaModal && togglerInputModal) {
+      togglerSchemaModal.addEventListener("change", () => {
+        togglerInputModal.toggleAttribute('checked');
+        setTheme(togglerInputModal, togglerInput);
       })
     }
 
     if (sun) {
       sun.addEventListener("click", () => {
         togglerInput.checked = false;
-        setTheme();
+        setTheme(togglerInput, togglerInputModal);
       })
     }
 
     if (moon) {
       moon.addEventListener("click", () => {
         togglerInput.checked = true;
-        setTheme();
+        setTheme(togglerInput, togglerInputModal);
       })
     }
   })

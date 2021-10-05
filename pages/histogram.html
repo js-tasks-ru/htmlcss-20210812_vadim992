@@ -34,7 +34,7 @@
             <nav class="mob-menu__nav x-p12">
               <div class="mob-menu__control">
                 <span class="mob-menu__mode">Dark mode</span>
-                <label class="toggler">
+                <label class="toggler" id="toggler-schema-modal">
                   <input class="toggler__input" type="checkbox" name="toggler" value="1">
                   <span class="toggler__label"></span>
               </label>
@@ -71,7 +71,7 @@
                   <svg id="sun" class="nav__controls-item" width="24" height="24">
                     <use xlink:href="../src/images/sprite.svg#sun"></use>
                   </svg>
-                  <label class="nav__controls-item toggler">
+                  <label class="nav__controls-item toggler" id="toggler-schema">
                     <input class="toggler__input" type="checkbox" name="toggler" value="1">
                     <span class="toggler__label"></span>
                   </label>
@@ -288,6 +288,7 @@
     </footer>
   </div>
   <script src="../src/js/toggler.js"></script>
+  <script src="../src/js/schema.js"></script>
   <script src="../src/js/mob-menu.js"></script>
 </body>
 </html>

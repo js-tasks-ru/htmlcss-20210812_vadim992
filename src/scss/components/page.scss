@@ -10,7 +10,7 @@
       width: calc(100% - 16px);
     }
     @media (min-width: 768px) {
-      max-width: 1110px;
+      max-width: var(--container-width);
     }
   }
 

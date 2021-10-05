@@ -2,11 +2,9 @@
 .header {
   $breakpoint-md: 768px;
   padding-top: 17px;
-  padding-bottom: 17px;
   background-color: var(--white);
-  @media (min-width: $breakpoint-md) { /* >= 768 */
+  @media (min-width: $breakpoint-md) {
     padding-top: 25px;
-    padding-bottom: 13px;
   }
 
   &__title {

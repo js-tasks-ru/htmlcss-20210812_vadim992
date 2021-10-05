@@ -66,32 +66,22 @@
     --box-shadow-input-error: 0px 1px 1px rgba(240, 61, 62, 0.1);
 
     --container-width: 1110px;
-
 }
 
-
-* {
-    font-family: 'Roboto', sans-serif;
-    box-sizing: border-box;
+html[data-mode="dark"] {
+    /*--white: #ffffff75;*/
+    --main-bg: var(--black);
+    --font-color: #ffffff75;
+    --dark-bg: var(--grey-1);
+    --white-bg: var(--black);
+    --light-bg: var(--grey-4);
+    --grey-bg: var(--grey-4);
+    --card-bg: var(--black);
+    --text-primary: var(--white);
+    --active-text-color: var(--grey-2);
+    --input-text-color: var(--font-color);
 }
 
-html, body {
-    height: 100%;
-}
-
-ul {
-    padding: 0;
-    margin: 0;
-}
-
-li {
-    list-style-type: none;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    margin: 0;
-}
-
-a {
-    text-decoration: none;
+html[data-mode="dark"] img {
+    filter: brightness(.8) contrast(1.2);
 }

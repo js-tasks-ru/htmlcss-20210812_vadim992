@@ -2,9 +2,4 @@
 .main {
   flex-grow: 1;
   background-color: var(--main-section-bg);
-  padding-bottom: 22px;
-
-  @media (min-width: 768px) {
-    padding-bottom: 68px;
-  }
 }

@@ -21,7 +21,7 @@
       "header"
       "main"
       "footer";
-    row-gap: 0;
+    // row-gap: 0;
     height: 100%;
     background-color: var(--page-component-bg);
     @media (min-width: 768px) {
@@ -29,7 +29,7 @@
         "header header header"
         "main main main"
         "footer footer footer";
-      row-gap: 36px;
+      // row-gap: 36px;
     }
   }
   
@@ -43,6 +43,7 @@
     grid-template-columns: 1fr;
     justify-content: center;
     justify-self: center;
+    margin-top: 60px;
     @media (min-width: 768px) {
       grid-template-columns: auto 1fr;
     }
@@ -68,7 +69,8 @@
   
     color: var(--grey-3);
     @media (min-width: 768px) {
-      padding-bottom: 56px;
+      padding-top: 32px;
+      padding-bottom: 32px;
     }
   }
 }

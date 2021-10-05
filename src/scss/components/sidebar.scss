@@ -1,7 +1,7 @@
 /*  Боковое меню на странице компонента */
 .sidebar {
   width: calc(229px + 56px);  // menu + gap
-  background-color: var(--main-section-bg);
+  background-color: var(--page-component-bg);
   display: none;
   @media (min-width: 768px) {
     display: block;

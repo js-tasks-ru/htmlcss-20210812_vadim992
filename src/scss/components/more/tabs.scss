@@ -78,12 +78,12 @@
 // изначально содержание всех ТАБов скрыто
 .tabs__content {
   display: none;
-  padding-top: 24px;
-  padding-bottom: 16px;
+  padding-top: 48px;
+  padding-bottom: 48px;
   border-top: 1px solid var(--grey-2);
-  &:last-child {
-    padding-bottom: 0;
-  }
+  // &:last-child {
+  //   padding-bottom: 0;
+  // }
 }
 
 .tabs__content_grey {

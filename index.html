@@ -6,14 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Library HTMLCSS components</title>
   <link rel="stylesheet" href="./dist/styles.css">
-  <link rel="stylesheet" href="./grid.css">
   <style>
-    /* body {
-        display: flex;
-        justify-content: center;
-        padding-top: 10%;
-    } */
-
     .wrapper {
       width: 100%;
     }
@@ -75,7 +68,7 @@
     }
 
     .element-title {
-      color: var(--grey-3);
+      color: var(--element-title-text);
       display: block;
       font-family: var(--ff-secondary);
       font-size: 28px;
@@ -88,6 +81,19 @@
     .no-pointer-events {
       pointer-events: none;
     }
+
+    .cards-wrapper {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr));
+      gap: 16px;
+    }
+
+    @media (min-width: 600px) {
+      .cards-wrapper {
+        gap: 30px;
+        grid-template-columns: repeat(auto-fill, minmax(calc((600px - 30px) / 2), 1fr));
+      }
+    } 
   </style>  
 </head>
 <body class="page">
@@ -179,7 +185,7 @@
       <!-- All components begin -->
       <section class="tabs__content tabs__content_1 tabs__content_grey"> 
         <h2 class="available-hidden">All components</h2>
-        <section class="container cards">
+        <section class="container cards-wrapper">
           <!-- Tooltip -->
           <a href="/pages/tooltip.html" class="card">
             <div class="card__top">
@@ -411,7 +417,7 @@
       <!-- Atoms begin -->
       <section class="tabs__content tabs__content_2 tabs__content_grey"> 
         <h2 class="available-hidden">Atoms</h2>
-        <section class="container cards">
+        <section class="container cards-wrapper">
           <!-- Tooltip -->
           <a href="/pages/tooltip.html" class="card">
             <div class="card__top">
@@ -550,7 +556,7 @@
       <!-- Molecules begin -->
       <section class="tabs__content tabs__content_3 tabs__content_grey"> 
         <h2 class="available-hidden">Molecules</h2>
-        <section class="container cards">
+        <section class="container cards-wrapper">
           <!-- Custom form elements: radio/checkbox -->
           <a href="/pages/form.html" class="card">
             <div class="card__top no-pointer-events">
@@ -720,7 +726,7 @@
       <!-- Organisms begin -->
       <section class="tabs__content tabs__content_4 tabs__content_grey"> 
         <h2 class="available-hidden">Organisms</h2>
-        <section class="container cards">
+        <section class="container cards-wrapper">
           <!-- Modal -->
           <a href="/pages/modal.html" class="card">
             <div class="card__top">
@@ -863,7 +869,7 @@
       <!-- Organisms end -->
     </section>
   </main>   
-  <footer class="footer">
+  <footer class="footer container">
     <h2 class="footer__title">About</h2>
     <p class="footer__description">
       This project is a collection of professionally designed, pre-built, fully responsive HTML snippets you can drop into your projects. Get started by checking out our free preview components, or browsing the PNG previews in the categories you're most curious about.

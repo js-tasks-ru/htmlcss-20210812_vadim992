@@ -6,12 +6,8 @@
     const togglerSchemaModal = document.querySelector('#toggler-schema-modal');
     const togglerInputModal = togglerSchemaModal.querySelector('.toggler__input');
 
-    // console.log(`togglerInputModal:`,togglerInputModal);
+    const schema = sessionStorage.getItem('schema') || 'light';
 
-    let schema = sessionStorage.getItem('schema');
-    if (!schema) {
-      schema = 'light';
-    }
     html.setAttribute('data-mode', schema);
     togglerInput.checked = (schema == 'light') ? false : true;
     togglerInputModal.checked = (schema == 'light') ? false : true;

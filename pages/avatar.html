@@ -5,9 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Avatar</title>
-  <link rel="stylesheet" href="../dist/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css">
-
+  <link rel="stylesheet" href="../dist/styles.css">
 </head>
 <body>
   <h1 class="available-hidden">Reusable component library sources</h1>
@@ -38,7 +37,7 @@
                 <span class="mob-menu__mode">Dark mode</span>
                 <label class="toggler" id="toggler-schema-modal">
                   <input class="toggler__input" type="checkbox" name="toggler" value="1">
-                  <span class="toggler__label"></span>
+                  <p class="toggler__label"></p>
               </label>
               </div>
               <div class="mob-menu__divider"></div>
@@ -75,7 +74,7 @@
                   </svg>
                   <label class="nav__controls-item toggler" id="toggler-schema">
                     <input class="toggler__input" type="checkbox" name="toggler" value="1">
-                    <span class="toggler__label"></span>
+                    <p class="toggler__label"></p>
                   </label>
                   <svg id="moon" class="nav__controls-item" width="24" height="24">
                     <use xlink:href="../src/images/sprite.svg#moon"></use>
@@ -116,7 +115,7 @@
                 <label class="tabs__label" for="#tab1">HTML</label>
                 <label class="tabs__label" for="#tab2">CSS</label>
               </div>
-              <div class="tabs__content tabs__content_1">
+              <div class="tabs__content tabs__content_1 tabs__content_p0">
                 <pre class="tabs__code">
                   <code>
 &lt;div class=&quot;avatar&quot;&gt;
@@ -125,7 +124,7 @@
                   </code>
                 </pre>
               </div>
-              <div class="tabs__content tabs__content_2">
+              <div class="tabs__content tabs__content_2 tabs__content_p0">
                 <pre class="tabs__code">
                   <code>
 .avatar {
@@ -152,7 +151,6 @@
   <script src="../src/js/toggler.js"></script>
   <script src="../src/js/schema.js"></script>
   <script src="../src/js/mob-menu.js"></script>
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
   <script>hljs.highlightAll();</script>
 </body>

@@ -8,12 +8,15 @@
   width: 24px;
   height: 24px;
   color: var(--black);
-  color: var(--tooltip-icon);
   cursor: pointer;
   pointer-events: all;
 }
 
 .tooltip__help {
+  display: none;
+}
+
+.tooltip__icon:hover + .tooltip__help {
   position: absolute;
   display: inline;
   max-width: 300px;
@@ -28,12 +31,6 @@
   border-radius: 10px;
   
   pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.25s ease-out;
-}
-
-.tooltip__icon:hover + .tooltip__help {
-  opacity: 1;
 }
 
 .tooltip__text {

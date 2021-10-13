@@ -2,94 +2,104 @@
   display: inline-block;
   line-height: 0;
   position: relative;
-}
+  
+  &__input {
+    position: absolute;
+    opacity: 0;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    z-index: -1;
+    pointer-events: none;
+    cursor: default;
+  }
 
-.toggler__input {
-  position: absolute;
-  opacity: 0;
-  clip: rect(0 0 0 0);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  z-index: -1;
-  pointer-events: none;
-  cursor: default;
-}
+  &__label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+  
+    font-family: var(--ff-secondary);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--toggler-label);
+    margin: 0;
 
-.toggler__label {
-  display: inline-flex;
-  align-items: center;
-  user-select: none;
+    &-text {
+      margin-left: 12px;
+      color: var(--label-color);
+    }
 
-  font-family: var(--ff-secondary);
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 24px;
-  color: var(--grey-4);
-}
+    /* состояние toggler по умолчанию (default) - окантовка */
+    &::before {
+      content: '';
+      width: 52px;
+      height: 28px;
+      flex-shrink: 0;
+      flex-grow: 0;
+      background: var(--toggler-default-bg);
+      border: 1px solid var(--toggler-border);
+      border-radius: 16px;
+      box-sizing: border-box;
+    }
 
-/* состояние toggler по умолчанию (default) - окантовка */
-.toggler__label::before {
-  content: '';
-  display: inline-block;
-  width: 52px;
-  height: 28px;
-  margin-right: 12px;
+    /* состояние toggler по умолчанию (default) - сердцевина */
+    &::after {
+      position: absolute;
+      content: '';
+      top: calc(50% - 24px/2);
+      left: 3px;
+      width: 24px;
+      height: 24px;
+      border-radius: 16px;
+      background: var(--toggler-default-inside-bg);
+      transition: transform 0.25s ease-out, background-color 0.25s linear;
+    }
 
-  flex-shrink: 0;
-  flex-grow: 0;
-  background: var(--white);
-  border: 1px solid var(--grey-2);
-  border-radius: 16px;
-  box-sizing: border-box;
-}
 
-/* состояние toggler по умолчанию (default) - сердцевина */
-.toggler__label::after {
-  position: absolute;
-  content: '';
-  top: calc(50% - 24px/2);
-  left: 3px;
-  width: 24px;
-  height: 24px;
-  border-radius: 16px;
-  background: var(--grey-2);
-}
+  }
+  
+  &__input {
+    /* toggler в состоянии hover */
+    &:not(:disabled):hover + .toggler__label {
+      cursor: pointer;
+    }
 
-/* toggler в состоянии hover */
-.toggler__input:not(:disabled):hover + .toggler__label {
-  cursor: pointer;
-}
+    /* toggler в состоянии checked - фон и бордер */
+    &:checked + .toggler__label::before {
+      background-color: var(--primary);
+      border-color: var(--primary);
+    }
 
-/* toggler в состоянии checked - фон и бордер */
-.toggler__input:checked + .toggler__label::before {
-  background-color: var(--primary);
-  border-color: var(--primary);
-}
+    /* toggler в состоянии checked - сердцевина */
+    &:checked + .toggler__label::after {
+      transform: translateX(23px);
+      background-color: var(--toggler-checked-bg);
+    }
 
-/* toggler в состоянии checked - сердцевина */
-.toggler__input:checked + .toggler__label::after {
-  left: 26px;
-  background-color: var(--white);
-}
+    /* toggler в состоянии focus */
+    &:focus + .toggler__label {
+      text-decoration: underline;
+    }
 
-/* toggler в состоянии focus */
-.toggler__input:focus + .toggler__label {
-  text-decoration: underline;
-}
+    /* toggler в состоянии disabled - подпись */
+    &:disabled + .toggler__label {
+      color: var(--toggler-disabled);
+    }
 
-/* toggler в состоянии disabled - подпись */
-.toggler__input:disabled + .toggler__label {
-  color: var(--grey-2);
-}
+    /* toggler в состоянии disabled - фон */
+    &:disabled + .toggler__label::before {
+      background-color: var(--toggler-disabled);
+    }
 
-/* toggler в состоянии disabled - фон */
-.toggler__input:disabled + .toggler__label::before {
-  background-color: var(--grey-2);
-}
+    /* toggler в состоянии disabled - сердцевина */
+    &:disabled + .toggler__label::after {
+      background-color: var(--toggler-disabled-inside-bg);
+    }
 
-/* toggler в состоянии disabled - сердцевина */
-.toggler__input:disabled + .toggler__label::after {
-  background-color: var(--grey-3);
+  }
+
 }

@@ -1,51 +1,62 @@
+/* Стилизация аккордеона */
 .accordion {
-  // max-width: 730px;
-  border: 1px solid var(--border-dark);
-  border-radius: 8px;
-  padding: 24px 32px;
-
-  font-size: 16px;
-  line-height: 24px;
+  border: 1px solid var(--border-color);
+  border-radius: 0.5em;
+  padding: 1em 1.5em;
+  font-family: var(--ff-secondary);
+  font-size: 1rem;
+  line-height: 1.5;
   background-color: var(--main-bg);
+
+  &__summary {
+    display: block;
+    outline: none;
+    height : 1.5em;
+  }
+  
+  &__title {
+    float: left;
+  }
+  
+  &__icon {
+    float: right;
+  }
+  
+  &__summary::after {
+    clear: both;
+  }
+
+  &__summary:focus {
+    border-radius: 2px;
+    padding: 2px 4px;
+    box-shadow: 0px 0px 2px 2px var(--outline-color); 
+  }
+
+  &__summary::-webkit-details-marker {
+    display: none;
+  }
+  
+  &__title {
+    color: var(--accordion-title);
+  }
+  
+  &__text {
+    color: var(--accordion-text);
+  }
+
+  &__icon {
+    color: var(--accordion-text);
+    margin-left: auto;
+    transition: transform 0.35s ease-out;
+  }
+
+  &[open] &__icon {
+    transform: rotate(180deg);
+    transition: transform 0.35s ease-out;
+  }
+
+  &[open] &__summary ~ * {
+    animation: sweep 0.75s ease-in-out;
+  }
 }
 
-.accordion__title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-family: var(--ff-secondary);
-  list-style: none;
-  outline: none;
-}
-
-.accordion__title:focus {
-  border-radius: 2px;
-  padding: 1px 2px;
-  box-shadow: 0px 0px 3px 3px var(--outline-color);
-}
-
-.accordion__title::-webkit-details-marker {
-  display: none;
-}
-
-.accordion__text {
-  font-family: var(--ff-secondary);
-}
-
-.accordion[open] .accordion__icon {
-  transform: rotate(180deg);
-  transition: rotate 1.2s ease-out;
-}
-
-.accordion__icon {
-  transition: rotate 1.2s ease-out;
-}
-
-.accordion[open] .accordion__title ~ * {
-  animation: sweep .5s ease-in-out;
-}
-
-@keyframes sweep {
-  0%    {opacity: 0; margin-left: -10px}
-  100%  {opacity: 1; margin-left: 0px}
-}

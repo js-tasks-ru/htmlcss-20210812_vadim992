@@ -1,138 +1,132 @@
 /* ТАБы */
+
+$tab_count: 7; // максимальное количество ТАБов
+
 .tabs {
   width: 100%;
   overflow-x: scroll;
   background-color: var(--tabs-color-bg);
-}
 
-.tabs_white {
-  background-color: var(--main-bg);
-}
-
-.tabs__input {
-  position: absolute;
-  opacity: 0;
-  clip: rect(0 0 0 0);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  z-index: -1;
-}
-
-.tabs__scroller {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  align-items: center;
-  width: 100%;
-  
-  @media (min-width: 356px) {
-    flex-direction: row;
-    height: 48px;
-    overflow-x: scroll;
+  &_white {
+    background-color: var(--main-bg);
   }
-}
 
-.tabs_pre,
-.tabs__code {
-  white-space: pre;
-  overflow-x: auto;
-  margin: 0;
-}
+  &__input {
+    position: absolute;
+    opacity: 0;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    z-index: -1;
+  }
 
-.tabs__label {
-  font-family: var(--ff-secondary);
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 24px;
-  margin-bottom: 8px;
+  &__scroller {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 100%;
+    
+    @media (min-width: 356px) {
+      flex-direction: row;
+      height: 48px;
+      overflow-x: scroll;
+    }
+  }
 
-  color: var(--grey-3);
-  white-space: nowrap;
-  position: relative;
+  &_pre,
+  &__code {
+    white-space: pre;
+    overflow-x: auto;
+    margin: 0;
+  }
 
-  @media (min-width: 356px) {
-    margin-bottom: 0;
-    margin-right: 40px;
-    padding-top: 6px;
-    padding-bottom: 4px;
-    &:last-child {
-      margin-right: 0;
+  &__label {
+    font-family: var(--ff-secondary);
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 8px;
+  
+    color: var(--grey-3);
+    white-space: nowrap;
+    position: relative;
+  
+    @media (min-width: 356px) {
+      margin-bottom: 0;
+      margin-right: 40px;
+      padding-top: 6px;
+      padding-bottom: 4px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    // подготовка для подчёркивания названия ТАБа
+    &::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      border-bottom: 5px solid transparent;
+      transform: scaleX(0);
+      transition: all 0.25s ease-in-out;
+    }
+  }
+
+  // изначально содержание всех ТАБов скрыто
+  &__content {
+    display: none;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    border-top: 1px solid var(--tabs-content-border-bg);
+
+    &.tabs__content_p0 {
+      padding: 0;
+    }
+
+    &_grey {
+      background-color: var(--tabs-content-grey-bg);
+    }
+  }
+
+  &__input {
+    // отображение содержания всех ТАБов при выбре ТАБа с модификатором .tabs__input_all
+    &.tabs__input_all:checked ~ .tabs__content {
+      display: block;
     }
   }
 }
 
-// подготовка для подчёркивания названия ТАБа
-.tabs__label::after {
-  content: '';
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  border-bottom: 5px solid transparent;
-  transform: scaleX(0);
-  transition: transform 0.25s;
-}
-
-// изначально содержание всех ТАБов скрыто
-.tabs__content {
-  display: none;
-  padding-top: 48px;
-  padding-bottom: 48px;
-  border-top: 1px solid var(--tabs-content-border-bg);
-}
-
-.tabs__content_grey {
-  background-color: var(--tabs-content-grey-bg);
-}
-
-// отображение содержания всех ТАБов при выбре ТАБа с модификатором .tabs__input_all
-.tabs__input.tabs__input_all:checked ~ .tabs__content {
-  display: block;
-}
 
 // отображение содержания выбранного ТАБа
-.tabs__input:nth-child(1):checked ~ .tabs__content_1,
-.tabs__input:nth-child(2):checked ~ .tabs__content_2,
-.tabs__input:nth-child(3):checked ~ .tabs__content_3,
-.tabs__input:nth-child(4):checked ~ .tabs__content_4,
-.tabs__input:nth-child(5):checked ~ .tabs__content_5,
-.tabs__input:nth-child(6):checked ~ .tabs__content_6,
-.tabs__input:nth-child(7):checked ~ .tabs__content_7 {
-  display: block;
+@for $i from 1 through $tab_count {
+  .tabs__input:nth-child(#{$i}):checked ~ .tabs__content_#{$i} {
+    display: block;
+  }
 }
 
 // выделение названия выбранного ТАБа
-.tabs__input:nth-child(1):checked ~ .tabs__scroller > .tabs__label:nth-child(1),
-.tabs__input:nth-child(2):checked ~ .tabs__scroller > .tabs__label:nth-child(2),
-.tabs__input:nth-child(3):checked ~ .tabs__scroller > .tabs__label:nth-child(3),
-.tabs__input:nth-child(4):checked ~ .tabs__scroller > .tabs__label:nth-child(4),
-.tabs__input:nth-child(5):checked ~ .tabs__scroller > .tabs__label:nth-child(5),
-.tabs__input:nth-child(6):checked ~ .tabs__scroller > .tabs__label:nth-child(6),
-.tabs__input:nth-child(7):checked ~ .tabs__scroller > .tabs__label:nth-child(7) {
-  color: var(--tabs-checked);
+@for $i from 1 through $tab_count {
+  .tabs__input:nth-child(#{$i}):checked ~ .tabs__scroller > .tabs__label:nth-child(#{$i}) {
+    color: var(--tabs-checked);
+  }
 }
 
 // подчёркивание ТАБа при наведении мышки
-.tabs__input:nth-child(1):hover ~ .tabs__scroller > .tabs__label:nth-child(1)::after,
-.tabs__input:nth-child(2):hover ~ .tabs__scroller > .tabs__label:nth-child(2)::after,
-.tabs__input:nth-child(3):hover ~ .tabs__scroller > .tabs__label:nth-child(3)::after,
-.tabs__input:nth-child(4):hover ~ .tabs__scroller > .tabs__label:nth-child(4)::after,
-.tabs__input:nth-child(5):hover ~ .tabs__scroller > .tabs__label:nth-child(5)::after,
-.tabs__input:nth-child(6):hover ~ .tabs__scroller > .tabs__label:nth-child(6)::after,
-.tabs__input:nth-child(7):hover ~ .tabs__scroller > .tabs__label:nth-child(7)::after {
-  border-bottom-color: var(--tabs-checked);
-  transform: scaleX(1);
+@for $i from 1 through $tab_count {
+  .tabs__input:nth-child(#{$i}):hover ~ .tabs__scroller > .tabs__label:nth-child(#{$i})::after{
+    border-bottom-color: var(--tabs-checked);
+    transform: scaleX(1);
+  }
 }
 
 // подчёркивание ТАБа при выборе 
-.tabs__input:nth-child(1):checked ~ .tabs__scroller > .tabs__label:nth-child(1)::after,
-.tabs__input:nth-child(2):checked ~ .tabs__scroller > .tabs__label:nth-child(2)::after,
-.tabs__input:nth-child(3):checked ~ .tabs__scroller > .tabs__label:nth-child(3)::after,
-.tabs__input:nth-child(4):checked ~ .tabs__scroller > .tabs__label:nth-child(4)::after,
-.tabs__input:nth-child(5):checked ~ .tabs__scroller > .tabs__label:nth-child(5)::after,
-.tabs__input:nth-child(6):checked ~ .tabs__scroller > .tabs__label:nth-child(6)::after,
-.tabs__input:nth-child(7):checked ~ .tabs__scroller > .tabs__label:nth-child(7)::after {
-  border-bottom-color: var(--tabs-checked);
-  transform: scaleX(1);
+@for $i from 1 through $tab_count {
+  .tabs__input:nth-child(#{$i}):checked ~ .tabs__scroller > .tabs__label:nth-child(#{$i})::after {
+    border-bottom-color: var(--tabs-checked);
+    transform: scaleX(1);
+  }
 }

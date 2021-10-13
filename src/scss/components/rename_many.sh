@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# ${var/Pattern/Replacement}
+# move *.css to *.scss in current directory
 
 for file in *.css
 do

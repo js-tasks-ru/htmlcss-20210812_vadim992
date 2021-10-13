@@ -26,12 +26,19 @@
       display: flex;
       flex-direction: column;
       justify-content: space-around;
-      gap: 32px;
+      /* gap: 32px; */
+    }
+    .form-elements-wrapper > * + * {
+      margin-top: 32px;
     }
 
     @media (min-width: 768px) {
       .form-elements-wrapper {
         flex-direction: row;
+      }
+      .form-elements-wrapper > * + * {
+        margin-top: 0;
+        margin-left: 32px;
       }
     }
 
@@ -40,8 +47,20 @@
     .toggler-wrapper {
       display: flex;
       flex-direction: column;
-      gap: 24px;
       text-align: initial;
+    }
+
+    .radio-wrapper > * + *,
+    .checkbox-wrapper > * + *,
+    .toggler-wrapper > * + * {
+      margin-top: 12px;
+    }
+    @media (min-width: 768px) {
+      .radio-wrapper > * + *,
+      .checkbox-wrapper > * + *,
+      .toggler-wrapper > * + *  {
+        margin-top: 24px;
+      }
     }
 
     .vertical-item {
@@ -528,25 +547,23 @@
                     </div>
                 </label>
               </div>
-
               <div class="toggler-wrapper"> <!-- toggler -->
                 <label class="toggler">
                   <input class="toggler__input available-hidden" type="checkbox" name="toggler" value="1">
-                  <span class="toggler__label">Off</span>
+                  <p class="toggler__label"><span class="toggler__label-text">Off</span></p>
               </label>
       
               <label class="toggler">
                   <input class="toggler__input available-hidden" type="checkbox" name="toggler" value="2" checked>
-                  <span class="toggler__label">On</span>
+                  <p class="toggler__label"><span class="toggler__label-text">On</span></p>
               </label>
       
               <label class="toggler">
                   <input class="toggler__input available-hidden" type="checkbox" name="toggler" value="3" disabled>
-                  <span class="toggler__label">Disabled</span>
+                  <p class="toggler__label"><span class="toggler__label-text">Disabled</span></p>
               </label>
       
               </div>
-
             </div>
           </div>
         </section>
@@ -829,8 +846,8 @@
           <h3 class="element-title">Accordion</h3>
           <div>
             <details class="accordion vertical-item" open>
-              <summary class="accordion__title">
-                <span>Accordion item 1</span>
+              <summary class="accordion__summary">
+                <span class="accordion__title">Accordion item 1</span>
                 <svg class="accordion__icon" width="24" height="24">
                   <use xlink:href="../src/images/sprite.svg#arrow-down"></use>
                 </svg>
@@ -841,8 +858,8 @@
             </details>
             
             <details class="accordion vertical-item">
-                <summary class="accordion__title">
-                  <span>Accordion item 2</span>
+                <summary class="accordion__summary">
+                  <span class="accordion__title">Accordion item 2</span>
                   <svg class="accordion__icon" width="24" height="24">
                     <use xlink:href="../src/images/sprite.svg#arrow-down"></use>
                   </svg>
@@ -853,8 +870,8 @@
             </details>
             
             <details class="accordion vertical-item">
-                <summary class="accordion__title">
-                  <span>Accordion item 3</span>
+                <summary class="accordion__summary">
+                  <span class="accordion__title">Accordion item 3</span>
                   <svg class="accordion__icon" width="24" height="24">
                     <use xlink:href="../src/images/sprite.svg#arrow-down"></use>
                   </svg>

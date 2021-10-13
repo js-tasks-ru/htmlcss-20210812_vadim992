@@ -11,6 +11,7 @@
     --grey-4: #495057;
     --grey-5: #334D6E;
     --grey-6: #495057;
+    --light-1: #F9FAFC;
 
     --error: var(--red);
     --success: var(--blue);
@@ -36,15 +37,18 @@
     --border-dark: var(--grey-3);
 
     --main-bg: var(--white);
-    --main-section-bg: #F9FAFC;
+    --main-section-bg: var(--light-1);
     --skeleton-gradient: linear-gradient(92.51deg, #DDE2E5 6.44%, #E2E6E8 38.47%, #F3F5F5 56.48%, #E3E7EA 77.5%, #DDE2E5 102.52%);
+    --skeleton-bg: var(--grey-2);
 
     --page-component-bg: var(--grey-1);
+    
+    --page-footer-title: var(--grey-3);
     --calendar-item-between-active-bg: rgba(160, 177, 245, 0.2);
     --box-shadow-color: rgba(33, 36, 41, 0.05);
     --bg-grey: rgb(77%, 77%, 77%, 0.5);
     --outline-color: #769CE4;
-    --label-color: var(--grey-6);
+    --label-color: var(--grey-4);
     --border-input-color: var(--grey-2);
 
     --component-menu-header: #000000;
@@ -53,8 +57,16 @@
 
     --notification: #D84910;
     --mob-menu-width: 440px;
-    --mob-menu-bg: #F9FAFC;
+    --mob-menu-bg: var(--light-1);
     --mob-menu-parent-bg: rgba(0,0,0,0.5);
+    --mob-menu-title: var(--grey-3);
+    --mob-menu-link: var(--black);
+    --mob-menu-link-hover: hsl(0deg 0% 50%);
+    --mob-menu-open: var(--grey-6);
+    --mob-menu-open-icon: var(--grey-4);
+    --mob-menu-open-icon-bg: var(--grey-1);
+    --mob-menu-close-icon-bg: var(--grey-2);
+    --mob-menu-close-icon: var(--grey-4);
 
     --breakpoint-xs: 0;
     --breakpoint-sm: 576px;
@@ -72,20 +84,115 @@
     --tabs-content-border-bg: var(--grey-2);
     --tabs-content-grey-bg: var(--grey-1);
     --tabs-checked: var(--black);
+
+    --border-color: var(--grey-3);
+    --checkbox-input: var(--grey-2);
+    --input-label: var(--grey-3);
+    --input-control: var(--grey-4);
+    --input-placeholder: var(--grey-2);
+
+    --logo-color: var(--black);
+    --divider-color: var(--grey-2);
+    --label-dark-switch-color: var(--grey-4);
+
+    --modal-context-bg: var(--bg-grey);
+    --modal-bg: var(--white);
+    --modal-icon: var(--grey-4);
+    --modal-body-title: var(--grey-5);
+    --modal-body-text: var(--grey-4);
+
+    --radio-label: var(--grey-4);
+    --radio-border-default-color: var(--grey-2);
+    --radio-border-hover-color: var(--grey-3);
+    --radio-active-bg: var(--grey-1);
+    --radio-checked-bg: var(--white);
+    --radio-checked-border-color: var(--blue);
+    --radio-checked-inside-bg: var(--blue);
+    --radio-disabled: var(--grey-2);
+
+    --toggler-label: var(--grey-4);
+    --toggler-default-bg: var(--white);
+    --toggler-border: var(--grey-2);
+    --toggler-default-inside-bg: var(--grey-2);
+    --toggler-checked-bg: var(--white);
+    --toggler-disabled: var(--grey-2);
+    --toggler-disabled-inside-bg: var(--grey-3);
+
+    --tooltip-icon: var(--blue);
+    --tooltip-active: var(--grey-2);
+
+    --card-bg: var(--white);
+    --card-title: var(--black);
+    --card-subtitle: var(--grey-4);
+
+    --footer-text: var(--black);
+
+    --header-bg: var(--white);
+    --header-title: var(--grey-4);
+    --header-title-breakpoint-md: var(--black);
+    
+    --menu-border: var(--black);
+    --menu-item: var(--grey-3);
+    --menu-item-active:  var(--black);
+
+    --nav-item: var(--grey-3);
+    --nav-item-fill: var(--white);
+
+    --histogram-title: var(--black);
+    --accordion-title: var(--black);
+    --accordion-text: var(--grey-4);
+
+    
 }
 
 html[data-mode="dark"] {
-    /*--white: #ffffff75;*/
+    --text-color: #ffffff75;
     --main-bg: var(--black);
-    --font-color: #ffffff75;
-    --dark-bg: var(--grey-1);
-    --white-bg: var(--black);
-    --light-bg: var(--grey-4);
-    --grey-bg: var(--grey-4);
+    --logo-color: var(--text-color);
+
+    --header-bg: var(--black);
+    --header-title: var(--text-color);
+    --header-title-breakpoint-md: var(--text-color);
+
+    --mob-menu-bg: var(--black);
+    --mob-menu-close-icon-bg: var(--grey-2);
+    --mob-menu-link: var(--text-color);
+    --mob-menu-open-icon: var(--text-color);
+    --mob-menu-open-icon-bg: var(--grey-4);
+
+    --tabs-content-border-bg: var(--grey-2);
+    --tabs-content-grey-bg: var(--grey-4);
+    --tabs-checked: var(--white);
+
+    --page-component-bg: var(--grey-4);
+    --component-menu-header: var(--text-color);
+    --component-title-text: var(--text-color);
+    --label-color: var(--text-color);
+
+
+
     --card-bg: var(--black);
-    --text-primary: var(--white);
-    --active-text-color: var(--grey-2);
-    --input-text-color: var(--font-color);
+    --card-title: var(--text-color);
+    --card-subtitle: var(--text-color);
+
+    --histogram-title: var(--text-color);
+    --accordion-title: var(--text-color);
+    --accordion-text: var(--text-color);
+
+    --footer-text: var(--text-color);
+
+    --skeleton-bg: var(--black);
+    --skeleton-gradient: linear-gradient(92.51deg, #838688 6.44%, #e1eaef1a 38.47%, #313636c2 56.48%, #E3E7EA 77.5%, #c4cac46b 102.52%);
+    --nav-item-fill: var(--grey-4);
+
+
+    // --dark-bg: var(--grey-1);
+    // --white-bg: var(--black);
+    // --light-bg: var(--grey-4);
+    // --grey-bg: var(--grey-4);
+    // --text-primary: var(--white);
+    // --active-text-color: var(--grey-2);
+    // --input-text-color: var(--font-color);
 }
 
 html[data-mode="dark"] img {

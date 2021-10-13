@@ -49,6 +49,10 @@
     --label-color: var(--grey-6);
     --border-input-color: var(--grey-2);
 
+    --tooltip-icon: var(--blue);
+
+    --border-color: var(--grey-3);
+
 }
 
 * {

@@ -34,7 +34,7 @@
       margin-bottom: 0;
     }
 
-    &:not(.sidebar__item_active):hover > .sidebar__link {
+    &:not(&_active):hover > .sidebar__link {
       color: var(--component-menu-hover);
     }
 

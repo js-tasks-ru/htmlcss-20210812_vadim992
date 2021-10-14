@@ -1781,7 +1781,6 @@ html[data-mode=dark] img {
   align-items: center;
   width: 28px;
   height: 28px;
-  background-color: var(--main-bg);
   border: 1px solid var(--border-input-color);
   border-radius: 4px;
   box-sizing: border-box;

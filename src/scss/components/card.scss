@@ -26,32 +26,31 @@
     max-width: 300px;
   }
 
-  &__title, 
+  &__title,
   &__subtitle {
     white-space: normal;
     overflow-x: hidden;
     text-overflow: ellipsis;
 
     @media screen and (min-width: 600px) {
-        white-space: pre;
-        overflow-x: hidden;
-        text-overflow: ellipsis;
-      }
+      white-space: pre;
+      overflow-x: hidden;
+      text-overflow: ellipsis;
     }
+  }
 
-    &__title {
-      margin-top: 16px;
-      font-weight: 500;
-      font-size: 21px;
-      line-height: 25px;
-      color: var(--card-title);
-    }
+  &__title {
+    margin-top: 16px;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 25px;
+    color: var(--card-title);
+  }
 
-    &__subtitle {
-      font-weight: normal;
-      font-size: 16px;
-      line-height: 19px;
-      color: var( --card-subtitle);
-    }
-
+  &__subtitle {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--card-subtitle);
+  }
 }

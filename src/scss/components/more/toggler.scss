@@ -2,7 +2,7 @@
   display: inline-block;
   line-height: 0;
   position: relative;
-  
+
   &__input {
     position: absolute;
     opacity: 0;
@@ -19,7 +19,6 @@
     display: inline-flex;
     align-items: center;
     user-select: none;
-  
     font-family: var(--ff-secondary);
     font-style: normal;
     font-weight: normal;
@@ -50,7 +49,7 @@
     &::after {
       position: absolute;
       content: '';
-      top: calc(50% - 24px/2);
+      top: calc(50% - 24px / 2);
       left: 3px;
       width: 24px;
       height: 24px;
@@ -58,10 +57,8 @@
       background: var(--toggler-default-inside-bg);
       transition: transform 0.25s ease-out, background-color 0.25s linear;
     }
-
-
   }
-  
+
   &__input {
     /* toggler в состоянии hover */
     &:not(:disabled):hover + .toggler__label {
@@ -99,7 +96,5 @@
     &:disabled + .toggler__label::after {
       background-color: var(--toggler-disabled-inside-bg);
     }
-
   }
-
 }

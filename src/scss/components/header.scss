@@ -1,7 +1,6 @@
 /* Заголовок */
 .header {
   $breakpoint-md: 768px;
-
   padding-top: 17px;
   background-color: var(--header-bg);
   @media (min-width: $breakpoint-md) {
@@ -12,7 +11,6 @@
     padding-top: 48px;
     padding-bottom: 32px;
     margin: 0;
-  
     font-family: var(--ff-secondary);
     font-weight: 400;
     font-size: 28px;
@@ -28,7 +26,7 @@
       color: var(--header-title-breakpoint-md);
     }
   }
-  
+
   &__link-main {
     margin: 0 auto;
 
@@ -37,7 +35,7 @@
       margin-right: auto;
     }
   }
-  
+
   &__logo {
     margin: 0 auto;
     color: var(--logo-color);
@@ -47,7 +45,7 @@
       margin-right: auto;
     }
   }
-  
+
   &__nav {
     display: none;
 
@@ -55,18 +53,18 @@
       display: inline-block;
     }
   }
-  
+
   &_grey {
     background-color: var(--page-component-bg);
   }
-  
+
   &__top-panel {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;  
+    position: relative;
   }
-  
+
   &__mob-menu-open {
     position: absolute;
     left: 12px;

@@ -27,7 +27,7 @@ $tab_count: 7; // максимальное количество ТАБов
     flex-wrap: nowrap;
     align-items: center;
     width: 100%;
-    
+
     @media (min-width: 356px) {
       flex-direction: row;
       height: 48px;
@@ -48,11 +48,10 @@ $tab_count: 7; // максимальное количество ТАБов
     font-size: 16px;
     line-height: 24px;
     margin-bottom: 8px;
-  
     color: var(--grey-3);
     white-space: nowrap;
     position: relative;
-  
+
     @media (min-width: 356px) {
       margin-bottom: 0;
       margin-right: 40px;
@@ -100,7 +99,6 @@ $tab_count: 7; // максимальное количество ТАБов
   }
 }
 
-
 // отображение содержания выбранного ТАБа
 @for $i from 1 through $tab_count {
   .tabs__input:nth-child(#{$i}):checked ~ .tabs__content_#{$i} {
@@ -110,6 +108,7 @@ $tab_count: 7; // максимальное количество ТАБов
 
 // выделение названия выбранного ТАБа
 @for $i from 1 through $tab_count {
+  // prettier-ignore
   .tabs__input:nth-child(#{$i}):checked ~ .tabs__scroller > .tabs__label:nth-child(#{$i}) {
     color: var(--tabs-checked);
   }
@@ -117,14 +116,16 @@ $tab_count: 7; // максимальное количество ТАБов
 
 // подчёркивание ТАБа при наведении мышки
 @for $i from 1 through $tab_count {
-  .tabs__input:nth-child(#{$i}):hover ~ .tabs__scroller > .tabs__label:nth-child(#{$i})::after{
+  // prettier-ignore
+  .tabs__input:nth-child(#{$i}):hover ~ .tabs__scroller > .tabs__label:nth-child(#{$i})::after {
     border-bottom-color: var(--tabs-checked);
     transform: scaleX(1);
   }
 }
 
-// подчёркивание ТАБа при выборе 
+// подчёркивание ТАБа при выборе
 @for $i from 1 through $tab_count {
+  // prettier-ignore
   .tabs__input:nth-child(#{$i}):checked ~ .tabs__scroller > .tabs__label:nth-child(#{$i})::after {
     border-bottom-color: var(--tabs-checked);
     transform: scaleX(1);

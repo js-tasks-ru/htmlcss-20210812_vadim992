@@ -16,7 +16,6 @@
     display: inline-flex;
     align-items: center;
     user-select: none;
-  
     font-family: var(--ff-secondary);
     font-style: normal;
     font-weight: normal;
@@ -37,12 +36,13 @@
       box-sizing: border-box;
     }
   }
-  
+
   &__input {
     /* наведении курсора */
     &:not(:disabled):not(.radio_disabled):not(:checked) + .radio__label:hover {
       cursor: pointer;
     }
+    // prettier-ignore
     &:not(:disabled):not(.radio_disabled):not(:checked) + .radio__label:hover::before {
       border-color: var(--radio-border-hover-color);
     }

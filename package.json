@@ -8,6 +8,7 @@
     "build": "postcss src/scss/index.scss -o dist/styles.css",
     "stylelint": "stylelint **/*.scss",
     "prettier": "prettier --write **/*.scss",
+    "prettier-check": "prettier --check **/*.scss",
     "stylelint-check": "stylelint-config-prettier-check"
   },
   "husky": {

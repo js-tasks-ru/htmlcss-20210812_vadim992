@@ -4,7 +4,6 @@
   min-width: 200px;
   width: 100%;
   padding: 16px 24px 24px 24px;
-  
   background: var(--main-bg);
   border: 1px solid var(--border-color);
   border-radius: 8px;
@@ -15,7 +14,7 @@
     margin-bottom: 40px;
   }
 
-  &__total, 
+  &__total,
   &__view {
     display: flex;
     flex-direction: column;
@@ -39,8 +38,7 @@
     color: var(--primary);
   }
 
-  &__total-number
-  {
+  &__total-number {
     font-size: 20px;
     line-height: 26px;
     padding-top: 8px;

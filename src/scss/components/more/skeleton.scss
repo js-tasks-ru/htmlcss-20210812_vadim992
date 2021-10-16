@@ -32,7 +32,7 @@
     border-radius: 50%;
     background: var(--skeleton-bg);
   }
-  
+
   &__lines {
     display: flex;
     flex-direction: column;
@@ -50,11 +50,11 @@
     &__line_40pr {
       width: 40%;
     }
-    
+
     &__line_60pr {
       width: 60%;
     }
-    
+
     &_100pr {
       width: 100%;
     }
@@ -71,7 +71,4 @@
     background: var(--skeleton-gradient);
     background-size: 200%;
   }
-
 }
-
-

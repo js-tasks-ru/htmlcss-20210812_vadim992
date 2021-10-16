@@ -1,11 +1,10 @@
 /* Меню: верхнее (top) и нижнее (bottom) в header */
 .menu {
   $border-bottom: 5px solid var(--menu-border);
-  
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
- 
+
   &__item {
     font-family: var(--ff-secondary);
     font-weight: normal;
@@ -26,15 +25,15 @@
       transition: transform 0.25s;
     }
   }
-  
+
   &_bottom > &__item {
     margin-right: 8px;
   }
-  
+
   &__item:last-child {
     margin-right: 0;
   }
-  
+
   &__item_link {
     font-family: var(--ff-secondary);
   }
@@ -48,23 +47,21 @@
   &__item_active {
     color: var(--menu-item-active);
     &::after {
-      border-bottom: $border-bottom;;
+      border-bottom: $border-bottom;
       transform: scaleX(1);
     }
   }
-
 
   @media (min-width: 356px) {
     &_top > &__item {
       margin-right: 16px;
     }
   }
-  
-  @media (min-width: 768px) {
 
+  @media (min-width: 768px) {
     display: flex;
     justify-content: flex-start;
-    
+
     &_top > &__item {
       margin-right: 24px;
     }

@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
 
-  &__label, 
+  &__label,
   &__status {
     font-family: var(--ff-secondary);
     font-weight: 500;
@@ -18,7 +18,7 @@
     font-size: 8px;
     line-height: 14px;
   }
-  
+
   &__block {
     display: flex;
     position: relative;
@@ -31,21 +31,20 @@
     border: 1px solid var(--border-input-color);
     border-radius: 8px;
     box-sizing: border-box;
-  
     font-family: var(--ff-secondary);
     font-weight: normal;
     font-size: 20px;
     line-height: 26px;
     color: var(--input-control);
-  
+
     @media (min-width: 281px) {
       width: 240px;
     }
-  
+
     @media (min-width: 321px) {
       width: 290px;
     }
-  
+
     @media (min-width: 376px) {
       width: 351px;
     }
@@ -53,9 +52,8 @@
     &::placeholder {
       color: var(--input-placeholder);
     }
-    
   }
-  
+
   &:not(&_success) > &__block &__control:focus,
   &:not(&_invalid) > &__block &__control:focus {
     border: 1px solid var(--primary);

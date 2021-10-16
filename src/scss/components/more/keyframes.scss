@@ -1,11 +1,21 @@
 @keyframes splash {
-  from {box-shadow: 0 0 0 0 var(--grey-3)};
-  to {box-shadow: 0 0 0 1.3em hsl(0, 50%, 50%, 0)};
+  from {
+    box-shadow: 0 0 0 0 var(--grey-3);
+  }
+  to {
+    box-shadow: 0 0 0 1.3em hsl(0, 50%, 50%, 0);
+  }
 }
 
 @keyframes sweep {
-  from {opacity: 0; margin-left: -10px;}
-  to {opacity: 1; margin-left: 0;}
+  from {
+    opacity: 0;
+    margin-left: -10px;
+  }
+  to {
+    opacity: 1;
+    margin-left: 0;
+  }
 }
 
 @keyframes appear {
@@ -20,7 +30,10 @@
 }
 
 @keyframes backgroundWave {
-  from {background-position: 100%;}
-  to {background-position: -100%;}
+  from {
+    background-position: 100%;
+  }
+  to {
+    background-position: -100%;
+  }
 }
-

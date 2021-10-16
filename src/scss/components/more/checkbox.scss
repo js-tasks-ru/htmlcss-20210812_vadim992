@@ -12,7 +12,7 @@
     pointer-events: none;
     cursor: default;
   }
-  
+
   &__state {
     display: flex;
     align-items: center;
@@ -34,7 +34,7 @@
     align-items: center;
     width: 28px;
     height: 28px;
-    // background-color: var(--main-bg);  
+    // background-color: var(--main-bg);
     border: 1px solid var(--border-input-color);
     border-radius: 4px;
     box-sizing: border-box;
@@ -50,7 +50,7 @@
 
   &__input {
     /* чекбокс в состоянии hover */
-    &:not(:disabled):hover ~ .checkbox__state  {
+    &:not(:disabled):hover ~ .checkbox__state {
       cursor: pointer;
     }
     /* чекбокс в состоянии checked - фон и бордер */

@@ -2,7 +2,7 @@
 .nav {
   display: flex;
   align-items: center;
-  
+
   &__controls {
     margin-left: 56px;
     display: flex;
@@ -10,15 +10,15 @@
     color: var(--nav-item);
     fill: var(--nav-item-fill);
   }
-  
+
   &__controls-item {
     margin-right: 12px;
   }
-  
+
   &__controls-item:last-child {
     margin-right: 0;
   }
-  
+
   &__controls-item:hover {
     cursor: pointer;
   }

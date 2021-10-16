@@ -2,24 +2,21 @@
   min-height: 3em;
   border-radius: 0.5em;
   border: none;
-
   font-style: normal;
   font-weight: 500;
   font-size: 1em;
   line-height: 1.1875;
-
   text-align: center;
-
   cursor: pointer;
   transition: var(--transition-button);
   background-color: transparent;
-  padding: .5em 1em;
-  
+  padding: 0.5em 1em;
+
   &:disabled {
     opacity: 0.5;
     pointer-events: none;
   }
-  
+
   &_center {
     display: inline-flex;
     justify-content: center;
@@ -52,11 +49,3 @@
     }
   }
 }
-
-
-
-
-
-
-
-

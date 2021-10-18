@@ -73,6 +73,10 @@ $tab_count: 7; // максимальное количество ТАБов
       transform: scaleX(0);
       transition: all 0.25s ease-in-out;
     }
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   // изначально содержание всех ТАБов скрыто

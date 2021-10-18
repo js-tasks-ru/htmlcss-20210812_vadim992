@@ -103,16 +103,15 @@
 
     .cards-wrapper {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(min(100%, 258px), 1fr));
       gap: 16px;
     }
-
-    @media (min-width: 600px) {
+ 
+    @media (min-width: 768px) {
       .cards-wrapper {
         gap: 30px;
-        grid-template-columns: repeat(auto-fill, minmax(calc((600px - 30px) / 2), 1fr));
       }
-    } 
+    }
   </style>  
 </head>
 <body class="page">

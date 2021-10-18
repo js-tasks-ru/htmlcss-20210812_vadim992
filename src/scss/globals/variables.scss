@@ -160,6 +160,9 @@ html[data-mode='dark'] {
   --mob-menu-open-icon: var(--text-color);
   --mob-menu-open-icon-bg: var(--grey-4);
 
+  --menu-item: var(--grey-3);
+  --menu-item-active: var(--white);
+
   --tabs-content-border-bg: var(--grey-2);
   --tabs-content-grey-bg: var(--grey-4);
   --tabs-checked: var(--white);
@@ -180,7 +183,7 @@ html[data-mode='dark'] {
   --footer-text: var(--text-color);
 
   --skeleton-bg: var(--black);
-  
+
   // prettier-ignore
   --skeleton-gradient: linear-gradient(92.51deg, #838688 6.44%, #e1eaef1a 38.47%, #313636c2 56.48%, #e3e7ea 77.5%, #c4cac46b 102.52%);
   --nav-item-fill: var(--grey-4);

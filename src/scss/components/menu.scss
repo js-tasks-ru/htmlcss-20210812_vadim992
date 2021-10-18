@@ -12,18 +12,6 @@
     line-height: 24px;
     color: var(--menu-item);
     position: relative;
-
-    &::after {
-      content: '';
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      padding-bottom: 5px;
-      border-bottom: 5px solid transparent;
-      transform: scaleX(0);
-      transition: transform 0.25s;
-    }
   }
 
   &_bottom > &__item {
@@ -38,18 +26,9 @@
     font-family: var(--ff-secondary);
   }
 
-  &__item:hover::after {
-    border-bottom: $border-bottom;
-    transform: scaleX(1);
-  }
-
   &__item:active,
   &__item_active {
     color: var(--menu-item-active);
-    &::after {
-      border-bottom: $border-bottom;
-      transform: scaleX(1);
-    }
   }
 
   @media (min-width: 356px) {

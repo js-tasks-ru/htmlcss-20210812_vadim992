@@ -1,31 +1,31 @@
 .mob-menu {
   position: fixed;
   top: 0;
+  right: 0;
+  bottom: 0;
   left: 0;
-  width: 100vw;
-  max-width: var(--mob-menu-width);
-  height: 100vh;
-  background-color: var(--mob-menu-bg);
+  visibility: hidden;
+  opacity: 0;
+  background-color: var(--mob-menu-parent-bg);
+  pointer-events: none;
   transform: translateX(-100vw);
-  transition: transform 0.3s ease-in-out;
-  overflow: auto;
-  z-index: 2;
+  transition: all 0.3s ease-in-out;
+  z-index: 1;
 
   &[data-open] {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
     transform: translateX(0);
-    max-width: var(--mob-menu-width);
+  }
+
+  &__window {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    & + .mob-menu__context-background {
-      position: fixed;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background-color: var(--mob-menu-parent-bg);
-      transition: background-color 0.6s linear;
-      // pointer-events: none;
-      z-index: 1;
-    }
+    max-width: var(--mob-menu-width);
+    background-color: var(--mob-menu-bg);
   }
 
   &__open {
@@ -129,5 +129,9 @@
       color: var(--notification);
       cursor: default;
     }
+  }
+
+  &__nav {
+    padding-bottom: 32px;
   }
 }

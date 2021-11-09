@@ -1,9 +1,8 @@
-(function() {
-  document.addEventListener("DOMContentLoaded", () => {
+(function () {
+  document.addEventListener('DOMContentLoaded', () => {
     const menu = document.getElementById('mob-menu');
     const menuClose = document.getElementById('mob-menu-close');
     const menuOpen = document.getElementById('mob-menu-open');
-    const contextArea = document.querySelector('.mob-menu__context-background');
 
     if (menuOpen) {
       menuOpen.addEventListener('click', () => {
@@ -19,13 +18,13 @@
         }
       });
     }
-    if (contextArea) {
-      contextArea.addEventListener('click', (e) => {
-        if (menu) {
+    if (menu) {
+      menu.addEventListener('click', (e) => {
+        if (e.target.className === 'mob-menu') {
           e.stopPropagation();
           menu.removeAttribute('data-open');
         }
       });
     }
-  })
+  });
 })();

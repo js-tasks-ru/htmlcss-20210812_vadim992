@@ -23,7 +23,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
     max-width: var(--mob-menu-width);
     background-color: var(--mob-menu-bg);
   }

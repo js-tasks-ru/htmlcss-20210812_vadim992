@@ -27,6 +27,7 @@
     height: 100vh;
     max-width: var(--mob-menu-width);
     background-color: var(--mob-menu-bg);
+    overflow: auto;
   }
 
   &__open {

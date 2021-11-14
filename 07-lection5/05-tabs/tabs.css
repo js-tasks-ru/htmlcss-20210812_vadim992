@@ -1,8 +1,11 @@
 .tabs {
   width: 100%;
-  height: 100%;
   overflow-x: scroll;
   background-color: var(--grey-1);
+}
+
+.tabs_white {
+  background-color: var(--main-bg);
 }
 
 .tabs__input {
@@ -28,15 +31,20 @@
 @media (min-width: 356px) {
   .tabs__scroller {
     flex-direction: row;
-    height: 44px;
-    gap: 40px;
+    height: 48px;
+    /* gap: 40px; */
     overflow-x: scroll;
   }
 }
 
-.tabs__label {
-  border-bottom: 5px solid transparent;
+.tabs_pre,
+.tabs__code {
+  white-space: pre;
+  overflow-x: auto;
+  margin: 0;
+}
 
+.tabs__label {
   font-family: var(--ff-secondary);
   font-weight: normal;
   font-size: 16px;
@@ -44,30 +52,80 @@
 
   color: var(--grey-3);
   white-space: nowrap;
-  transition: 0.25s all;
+  position: relative;
 }
 
 @media (min-width: 356px) {
   .tabs__label {
+    margin-right: 40px;
     padding-top: 6px;
     padding-bottom: 4px;
   }
+  .tabs__label:last-child {
+    margin-right: 0;
+  }
 }
 
+/* подготовка для подчёркивания названия ТАБа */
+.tabs__label::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  border-bottom: 5px solid transparent;
+  transform: scaleX(0);
+  transition: transform 0.25s;
+}
+
+/* изначально содержание всех ТАБов скрыто */
 .tabs__content {
   display: none;
-  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
-.tabs__input:nth-child(1):checked ~ .tabs__content,
-.tabs__input:nth-child(2):checked ~ .tabs__content_complex,
-.tabs__input:nth-child(3):checked ~ .tabs__content_simple {
+.tabs__content:last-child {
+  padding-bottom: 0;
+}
+
+/* отображение содержания всех ТАБов при выбре ТАБа с модификатором .tabs__input_all */
+.tabs__input.tabs__input_all:checked ~ .tabs__content {
   display: block;
 }
 
+/* отображение содержания выбранного ТАБа */
+.tabs__input:nth-child(1):checked ~ .tabs__content_1,
+.tabs__input:nth-child(2):checked ~ .tabs__content_2,
+.tabs__input:nth-child(3):checked ~ .tabs__content_3 {
+  display: block;
+}
+
+/* выделение названия выбранного ТАБа */
 .tabs__input:nth-child(1):checked ~ .tabs__scroller > .tabs__label:nth-child(1),
 .tabs__input:nth-child(2):checked ~ .tabs__scroller > .tabs__label:nth-child(2),
 .tabs__input:nth-child(3):checked ~ .tabs__scroller > .tabs__label:nth-child(3) {
   color: var(--black);
-  border-bottom-color: var(--black) ;
+}
+
+/* выделение названия ТАБа при наведении мышки */
+.tabs__input:nth-child(1):hover ~ .tabs__scroller > .tabs__label:nth-child(1),
+.tabs__input:nth-child(2):hover ~ .tabs__scroller > .tabs__label:nth-child(2),
+.tabs__input:nth-child(3):hover ~ .tabs__scroller > .tabs__label:nth-child(3) {
+  color: var(--black);
+}
+
+/* подчёркивание ТАБа при наведении мышки */
+.tabs__input:nth-child(1):hover ~ .tabs__scroller > .tabs__label:nth-child(1)::after,
+.tabs__input:nth-child(2):hover ~ .tabs__scroller > .tabs__label:nth-child(2)::after,
+.tabs__input:nth-child(3):hover ~ .tabs__scroller > .tabs__label:nth-child(3)::after {
+  border-bottom-color: var(--black);
+  transform: scaleX(1);
+}
+
+/* подчёркивание ТАБа при выборе  */
+.tabs__input:nth-child(1):checked ~ .tabs__scroller > .tabs__label:nth-child(1)::after,
+.tabs__input:nth-child(2):checked ~ .tabs__scroller > .tabs__label:nth-child(2)::after,
+.tabs__input:nth-child(3):checked ~ .tabs__scroller > .tabs__label:nth-child(3)::after {
+  border-bottom-color: var(--black);
+  transform: scaleX(1);
 }

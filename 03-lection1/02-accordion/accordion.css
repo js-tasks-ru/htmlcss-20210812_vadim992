@@ -1,39 +1,59 @@
 /* Стилизация аккордеона */
 .accordion {
-  max-width: 730px;
-  border: 1px solid var(--border-dark);
-  border-radius: 8px;
-  padding: 24px 32px;
+  max-width: 500px;
+  border: 1px solid var(--border-color);
+  border-radius: 0.5em;
+  padding: 1em 1.5em;
+  font-size: 1rem;
+  line-height: 1.5;
+  background-color: var(--main-bg);
+}
 
-  font-size: 16px;
-  line-height: 24px;
+.accordion__summary {
+  display: block;
+  outline: none;
+  height : 1.65em;
 }
 
 .accordion__title {
-  display: block;
-  font-family: var(--ff-secondary);
-  display: flex;
-  justify-content: space-between;
+  float: left;
 }
 
-.accordion__title::-webkit-details-marker {
+.accordion__icon {
+  float: right;
+}
+
+.accordion__summary::after {
+  clear: both;
+}
+
+.accordion__summary:focus {
+  border-radius: 2px;
+  padding: 2px 4px;
+  box-shadow: 0px 0px 2px 2px var(--outline-color);
+}
+
+.accordion__summary::-webkit-details-marker {
   display: none;
 }
 
+.accordion__title,
 .accordion__text {
   font-family: var(--ff-secondary);
+  color: var(--accordion-text);
 }
 
 .accordion[open] .accordion__icon {
   transform: rotate(180deg);
-  transition: rotate 1.2s ease-out;
+  transition: transform 0.35s ease-out;
 }
 
 .accordion__icon {
-  transition: rotate 1.2s ease-out;
+  margin-left: auto;
+  transition: transform 0.35s ease-out;
 }
 
-.accordion[open] .accordion__title ~ * {
+.accordion[open] .accordion__summary ~ * {
   animation: sweep .5s ease-in-out;
 }
 

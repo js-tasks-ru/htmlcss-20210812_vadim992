@@ -4,9 +4,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simple Example Web App</title>
+  <title>Tooltip</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css">
   <link rel="stylesheet" href="../dist/styles.css">
+  <style>
+    .component__wrapper {
+      margin-left: 32px;
+    }
+  </style>
 </head>
 <body>
   <h1 class="available-hidden">Reusable component library sources</h1>
@@ -27,7 +32,7 @@
                   <use xlink:href="../src/images/sprite.svg#menu-close"></use>
                 </svg>
               </button>
-              <svg class="mob-menu__icon-logo">
+              <svg  width="100" height="100" class="mob-menu__icon-logo">
                 <use xlink:href="../src/images/sprite.svg#logo"></use>
               </svg>
             </div>
@@ -43,8 +48,8 @@
               <div class="mob-menu__divider"></div>
               <h4 class="mob-menu__title">Components</h4>
               <ul>
-                <li class="mob-menu__item"><a class="mob-menu__link mob-menu__link_active" href="./modal.html">Modal</a></li>
-                <li class="mob-menu__item"><a class="mob-menu__link" href="./tooltip.html">Tooltip</a></li>
+                <li class="mob-menu__item"><a class="mob-menu__link" href="./modal.html">Modal</a></li>
+                <li class="mob-menu__item"><a class="mob-menu__link mob-menu__link_active" href="./tooltip.html">Tooltip</a></li>
                 <li class="mob-menu__item"><a class="mob-menu__link" href="./avatar.html">Avatar</a></li>
                 <li class="mob-menu__item"><a class="mob-menu__link" href="./calendar.html">Calendar</a></li>
                 <li class="mob-menu__item"><a class="mob-menu__link" href="./histogram.html">Histogram</a></li>
@@ -57,6 +62,7 @@
         <a class="header__link-main" href="/">
           <svg class="header__logo" width="110" height="32">
             <use xlink:href="../src/images/sprite.svg#logo"></use>
+            <use xlink:href=""></use>
           </svg>
         </a>
         <div class="header__nav">
@@ -77,7 +83,7 @@
                   <svg id="moon" class="nav__controls-item" width="24" height="24">
                     <use xlink:href="../src/images/sprite.svg#moon"></use>
                   </svg>
-                </div>
+              </div>
             </div>
         </div>
       </div>
@@ -87,8 +93,8 @@
         <h3 class="sidebar__title">Components</h3>
         <nav>
           <ul>
-            <li class="sidebar__item sidebar__item_active"><a class="sidebar__link" href="./modal.html">Modal</a></li>
-            <li class="sidebar__item"><a class="sidebar__link" href="./tooltip.html">Tooltip</a></li>
+            <li class="sidebar__item"><a class="sidebar__link" href="./modal.html">Modal</a></li>
+            <li class="sidebar__item sidebar__item_active"><a class="sidebar__link" href="./tooltip.html">Tooltip</a></li>
             <li class="sidebar__item"><a class="sidebar__link" href="./avatar.html">Avatar</a></li>
             <li class="sidebar__item"><a class="sidebar__link" href="./calendar.html">Calendar</a></li>
             <li class="sidebar__item"><a class="sidebar__link" href="./histogram.html">Histogram</a></li>
@@ -97,10 +103,17 @@
         </nav>
       </aside>
       <section class="component">
-        <h2 class="component__title">Title..</h2>
+        <h2 class="component__title">Tooltip</h2>
         <section class="component__wrapper">
           <!---->
-          this component
+          <div class="tooltip">
+            <svg class="tooltip__icon">
+              <use xlink:href="../src/images/sprite.svg#help"></use>
+            </svg>
+          <div class="tooltip__help">
+            <div class="tooltip__text">Helper text</div>
+          </div>
+        </div>  
           <!---->
         </section>
           <div class="component__tabs tabs">
@@ -114,14 +127,70 @@
               <div class="tabs__content tabs__content_1 tabs__content_p0">
                 <pre class="tabs__code">
                   <code>
-                    HTML this
+&lt;div class=&quot;tooltip&quot;&gt;
+  &lt;svg class=&quot;tooltip__icon&quot;&gt;
+    &lt;use xlink:href=&quot;../../assets/images/sprite.svg#help&quot;&gt;&lt;/use&gt;
+  &lt;/svg&gt;
+  &lt;div class=&quot;tooltip__help&quot;&gt;
+    &lt;div class=&quot;tooltip__text&quot;&gt;Helper text&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt; 
                   </code>
                 </pre>
               </div>
               <div class="tabs__content tabs__content_2 tabs__content_p0">
                 <pre class="tabs__code">
                   <code>
-                    CSS this
+.tooltip {
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.tooltip__icon {
+  width: 24px;
+  height: 24px;
+  color: var(--blue);
+  cursor: pointer;
+  pointer-events: all;
+}
+
+.tooltip__help {
+  display: none;
+}
+
+.tooltip__icon:hover + .tooltip__help {
+  position: absolute;
+  display: inline;
+  max-width: 300px;
+  padding: 13px 21px;
+  top: -150%;
+  left: 50%;
+  transform: translate(-50%, -10px);
+
+  color: var(--grey-2);
+  background-color: var(--primary);
+  box-shadow: 0px 2px 4px var(--box-shadow-color);
+  border-radius: 10px;
+  
+  pointer-events: none;
+}
+
+.tooltip__text {
+  overflow: hidden;
+}
+
+.tooltip__text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+
+  margin-left: -8px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: var(--primary) transparent transparent transparent;
+}
                   </code>
                 </pre>
               </div>

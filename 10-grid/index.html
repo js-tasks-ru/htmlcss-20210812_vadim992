@@ -4,9 +4,16 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Library HTMLCSS components</title>
-  <link rel="stylesheet" href="./dist/styles.css">
+  <title>Grid</title>
+  <link rel="stylesheet" href="../dist/styles.css">
+  <link rel="stylesheet" href="./grid.css">
   <style>
+    body {
+        display: flex;
+        justify-content: center;
+        padding-top: 10%;
+    }
+
     .wrapper {
       width: 100%;
     }
@@ -26,19 +33,12 @@
       display: flex;
       flex-direction: column;
       justify-content: space-around;
-      /* gap: 32px; */
-    }
-    .form-elements-wrapper > * + * {
-      margin-top: 32px;
+      gap: 32px;
     }
 
     @media (min-width: 768px) {
       .form-elements-wrapper {
         flex-direction: row;
-      }
-      .form-elements-wrapper > * + * {
-        margin-top: 0;
-        margin-left: 32px;
       }
     }
 
@@ -47,20 +47,8 @@
     .toggler-wrapper {
       display: flex;
       flex-direction: column;
+      gap: 24px;
       text-align: initial;
-    }
-
-    .radio-wrapper > * + *,
-    .checkbox-wrapper > * + *,
-    .toggler-wrapper > * + * {
-      margin-top: 12px;
-    }
-    @media (min-width: 768px) {
-      .radio-wrapper > * + *,
-      .checkbox-wrapper > * + *,
-      .toggler-wrapper > * + *  {
-        margin-top: 24px;
-      }
     }
 
     .vertical-item {
@@ -87,7 +75,7 @@
     }
 
     .element-title {
-      color: var(--element-title-text);
+      color: var(--grey-3);
       display: block;
       font-family: var(--ff-secondary);
       font-size: 28px;
@@ -100,109 +88,25 @@
     .no-pointer-events {
       pointer-events: none;
     }
-
-    .cards-wrapper {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(min(100%, 258px), 1fr));
-      gap: 16px;
-    }
- 
-    @media (min-width: 768px) {
-      .cards-wrapper {
-        gap: 30px;
-      }
-    }
-  </style>  
+  </style>
 </head>
-<body class="page">
-  <header class="header container">
-      <div class="header__top-panel">
-        <button id="mob-menu-open" class="header__mob-menu-open">
-          <svg class="header__mob-menu-open-icon">
-            <use xlink:href="../src/images/sprite.svg#menu"></use>
-          </svg>
-        </button>
-        <!-- Mobile menu - start -->
-        <div id="mob-menu" class="mob-menu">
-          <div class="mob-menu__window">
-            <div class="mob-menu__header x-p12">
-              <button id="mob-menu-close" class="mob-menu__close">
-                <svg class="mob-menu__icon-close">
-                  <use xlink:href="../src/images/sprite.svg#menu-close"></use>
-                </svg>
-              </button>
-              <svg class="mob-menu__icon-logo">
-                <use xlink:href="../src/images/sprite.svg#logo"></use>
-              </svg>
-            </div>
-            <div class="mob-menu__divider x-m12 x-mt16"></div>
-            <nav class="mob-menu__nav x-p12">
-              <div class="mob-menu__control">
-                <span class="mob-menu__mode">Dark mode.</span>
-                <label class="toggler" id="toggler-schema-modal">
-                  <input class="toggler__input" type="checkbox" name="toggler" value="1">
-                  <span class="toggler__label"></span>
-              </label>
-              </div>
-              <div class="mob-menu__divider"></div>
-              <h4 class="mob-menu__title">Components</h4>
-              <ul>
-                <li class="mob-menu__item"><a class="mob-menu__link" href="./pages/modal.html">Modal</a></li>
-                <li class="mob-menu__item"><a class="mob-menu__link" href="./pages/tooltip.html">Tooltip</a></li>
-                <li class="mob-menu__item"><a class="mob-menu__link" href="./pages/avatar.html">Avatar</a></li>
-                <li class="mob-menu__item"><a class="mob-menu__link" href="./pages/calendar.html">Calendar</a></li>
-                <li class="mob-menu__item"><a class="mob-menu__link" href="./pages/histogram.html">Histogram</a></li>
-                <li class="mob-menu__item"><a class="mob-menu__link" href="./pages/form.html">Custom form elements</a></li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-        <!-- Mobile menu - end -->
-        <svg class="header__logo" width="110" height="32">
-          <use xlink:href="../src/images/sprite.svg#logo"></use>
-        </svg>
-        <div class="header__nav">
-            <div class="nav">
-                <ul class="menu menu_top">
-                    <li class="menu__item menu__item_active"><a class="menu__item_link" href="pages/modal.html">Components</a></li>
-                    <li class="menu__item">About</li>
-                    <li class="menu__item">Contact</li>
-                </ul>
-                <div class="nav__controls">
-                  <svg id="sun" class="nav__controls-item" width="24" height="24">
-                    <use xlink:href="../src/images/sprite.svg#sun"></use>
-                  </svg>
-                  <label class="nav__controls-item toggler" id="toggler-schema">
-                    <input class="toggler__input" type="checkbox" name="toggler" value="1">
-                    <span class="toggler__label"></span>
-                  </label>
-                  <svg id="moon" class="nav__controls-item" width="24" height="24">
-                    <use xlink:href="../src/images/sprite.svg#moon"></use>
-                  </svg>
-                </div>
-            </div>
-        </div>
-      </div>        
-      <h1 class="header__title">Reusable component library</h1>
-  </header>
-  <main class="main">
+<body>
+  <div class="wrapper">
     <section class="tabs tabs_white">
       <input class="tabs__input" type="radio" name="tabs-nav" id="#tab1" checked>
       <input class="tabs__input" type="radio" name="tabs-nav" id="#tab2">
       <input class="tabs__input" type="radio" name="tabs-nav" id="#tab3">
       <input class="tabs__input" type="radio" name="tabs-nav" id="#tab4">
-
-      <div class="tabs__scroller container">
+      <div class="tabs__scroller">
         <label class="tabs__label" for="#tab1">All components</label>
         <label class="tabs__label" for="#tab2">Atoms</label>
         <label class="tabs__label" for="#tab3">Molecules</label>
         <label class="tabs__label" for="#tab4">Organisms</label>
       </div>
-
       <!-- All components begin -->
       <section class="tabs__content tabs__content_1 tabs__content_grey"> 
         <h2 class="available-hidden">All components</h2>
-        <section class="container cards-wrapper">
+        <section class="container cards">
           <!-- Tooltip -->
           <a href="/pages/tooltip.html" class="card">
             <div class="card__top">
@@ -429,12 +333,12 @@
           </a> 
         </section>        
       </section>
-      <!-- All components end -->
+       <!-- All components end -->
 
-      <!-- Atoms begin -->
+       <!-- Atoms begin -->
       <section class="tabs__content tabs__content_2 tabs__content_grey"> 
         <h2 class="available-hidden">Atoms</h2>
-        <section class="container cards-wrapper">
+        <section class="container cards">
           <!-- Tooltip -->
           <a href="/pages/tooltip.html" class="card">
             <div class="card__top">
@@ -536,7 +440,7 @@
                     <div class="checkbox__state">
                         <div class="checkbox__control">
                             <svg class="checkbox__icon">
-                                <use xlink:href="../src/images/sprite.svg#check"></use>
+                                <use xlink:href="../../assets/images/sprite.svg#check"></use>
                             </svg>  
                         </div>
                         <div class="checkbox__label">
@@ -545,23 +449,25 @@
                     </div>
                 </label>
               </div>
+
               <div class="toggler-wrapper"> <!-- toggler -->
                 <label class="toggler">
                   <input class="toggler__input available-hidden" type="checkbox" name="toggler" value="1">
-                  <p class="toggler__label"><span class="toggler__label-text">Off</span></p>
+                  <span class="toggler__label">Off</span>
               </label>
       
               <label class="toggler">
                   <input class="toggler__input available-hidden" type="checkbox" name="toggler" value="2" checked>
-                  <p class="toggler__label"><span class="toggler__label-text">On</span></p>
+                  <span class="toggler__label">On</span>
               </label>
       
               <label class="toggler">
                   <input class="toggler__input available-hidden" type="checkbox" name="toggler" value="3" disabled>
-                  <p class="toggler__label"><span class="toggler__label-text">Disabled</span></p>
+                  <span class="toggler__label">Disabled</span>
               </label>
       
               </div>
+
             </div>
           </div>
         </section>
@@ -571,7 +477,7 @@
       <!-- Molecules begin -->
       <section class="tabs__content tabs__content_3 tabs__content_grey"> 
         <h2 class="available-hidden">Molecules</h2>
-        <section class="container cards-wrapper">
+        <section class="container cards">
           <!-- Custom form elements: radio/checkbox -->
           <a href="/pages/form.html" class="card">
             <div class="card__top no-pointer-events">
@@ -741,7 +647,7 @@
       <!-- Organisms begin -->
       <section class="tabs__content tabs__content_4 tabs__content_grey"> 
         <h2 class="available-hidden">Organisms</h2>
-        <section class="container cards-wrapper">
+        <section class="container cards">
           <!-- Modal -->
           <a href="/pages/modal.html" class="card">
             <div class="card__top">
@@ -844,8 +750,8 @@
           <h3 class="element-title">Accordion</h3>
           <div>
             <details class="accordion vertical-item" open>
-              <summary class="accordion__summary">
-                <span class="accordion__title">Accordion item 1</span>
+              <summary class="accordion__title">
+                <span>Accordion item 1</span>
                 <svg class="accordion__icon" width="24" height="24">
                   <use xlink:href="../src/images/sprite.svg#arrow-down"></use>
                 </svg>
@@ -856,8 +762,8 @@
             </details>
             
             <details class="accordion vertical-item">
-                <summary class="accordion__summary">
-                  <span class="accordion__title">Accordion item 2</span>
+                <summary class="accordion__title">
+                  <span>Accordion item 2</span>
                   <svg class="accordion__icon" width="24" height="24">
                     <use xlink:href="../src/images/sprite.svg#arrow-down"></use>
                   </svg>
@@ -868,8 +774,8 @@
             </details>
             
             <details class="accordion vertical-item">
-                <summary class="accordion__summary">
-                  <span class="accordion__title">Accordion item 3</span>
+                <summary class="accordion__title">
+                  <span>Accordion item 3</span>
                   <svg class="accordion__icon" width="24" height="24">
                     <use xlink:href="../src/images/sprite.svg#arrow-down"></use>
                   </svg>
@@ -883,15 +789,6 @@
       </section>
       <!-- Organisms end -->
     </section>
-  </main>   
-  <footer class="footer container">
-    <h2 class="footer__title">About</h2>
-    <p class="footer__description">
-      This project is a collection of professionally designed, pre-built, fully responsive HTML snippets you can drop into your projects. Get started by checking out our free preview components, or browsing the PNG previews in the categories you're most curious about.
-    </p>
-  </footer>
-  <script src="../src/js/schema.js"></script>
-  <script src="../src/js/toggler.js"></script>
-  <script src="../src/js/mob-menu.js"></script>
+  </div>
 </body>
 </html>

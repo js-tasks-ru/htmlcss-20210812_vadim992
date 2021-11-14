@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simple Example Web App</title>
+  <title>Modal</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css">
   <link rel="stylesheet" href="../dist/styles.css">
 </head>
@@ -43,7 +43,7 @@
               <div class="mob-menu__divider"></div>
               <h4 class="mob-menu__title">Components</h4>
               <ul>
-                <li class="mob-menu__item"><a class="mob-menu__link mob-menu__link_active" href="./modal.html">Modal</a></li>
+                <li class="mob-menu__item"><a class="mob-menu__link mob-menu__link_active">Modal</a></li>
                 <li class="mob-menu__item"><a class="mob-menu__link" href="./tooltip.html">Tooltip</a></li>
                 <li class="mob-menu__item"><a class="mob-menu__link" href="./avatar.html">Avatar</a></li>
                 <li class="mob-menu__item"><a class="mob-menu__link" href="./calendar.html">Calendar</a></li>
@@ -57,6 +57,7 @@
         <a class="header__link-main" href="/">
           <svg class="header__logo" width="110" height="32">
             <use xlink:href="../src/images/sprite.svg#logo"></use>
+            <use xlink:href=""></use>
           </svg>
         </a>
         <div class="header__nav">
@@ -77,7 +78,7 @@
                   <svg id="moon" class="nav__controls-item" width="24" height="24">
                     <use xlink:href="../src/images/sprite.svg#moon"></use>
                   </svg>
-                </div>
+              </div>
             </div>
         </div>
       </div>
@@ -87,7 +88,7 @@
         <h3 class="sidebar__title">Components</h3>
         <nav>
           <ul>
-            <li class="sidebar__item sidebar__item_active"><a class="sidebar__link" href="./modal.html">Modal</a></li>
+            <li class="sidebar__item sidebar__item_active"><a class="sidebar__link">Modal</a></li>
             <li class="sidebar__item"><a class="sidebar__link" href="./tooltip.html">Tooltip</a></li>
             <li class="sidebar__item"><a class="sidebar__link" href="./avatar.html">Avatar</a></li>
             <li class="sidebar__item"><a class="sidebar__link" href="./calendar.html">Calendar</a></li>
@@ -97,10 +98,27 @@
         </nav>
       </aside>
       <section class="component">
-        <h2 class="component__title">Title..</h2>
+        <h2 class="component__title">Modal</h2>
         <section class="component__wrapper">
           <!---->
-          this component
+          <a id="modal-open" class="button button_primary button_center" href="#modal">Open modal</a>
+          <div id="modal" class="modal">
+            <div class="modal__window">
+              <a id="modal-close" href="#" title="Close" class="modal__close">
+                <svg class="modal__svg-icon">
+                  <use xlink:href="../src/images/sprite.svg#cross"></use>
+                </svg>          
+              </a>
+              <div class="modal__body">
+                <div class="modal__body-title">
+                  Modal title
+                </div>
+                <div class="modal__body-text">
+                  Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.<br />
+                </div>
+              </div>
+            </div>
+          </div> 
           <!---->
         </section>
           <div class="component__tabs tabs">
@@ -114,14 +132,99 @@
               <div class="tabs__content tabs__content_1 tabs__content_p0">
                 <pre class="tabs__code">
                   <code>
-                    HTML this
+&lt;a id=&quot;modal-open&quot; class=&quot;button button_primary&quot; href=&quot;#modal&quot;&gt;Open modal&lt;/a&gt;
+&lt;div id=&quot;modal&quot; class=&quot;modal&quot;&gt;
+  &lt;div class=&quot;modal__window&quot;&gt;
+    &lt;a id=&quot;modal-close&quot; href=&quot;#&quot; title=&quot;Close&quot; class=&quot;modal__close&quot;&gt;
+      &lt;svg class=&quot;modal__svg-icon&quot;&gt;
+        &lt;use xlink:href=&quot;../../assets/images/sprite.svg#cross&quot;&gt;&lt;/use&gt;
+      &lt;/svg&gt;          
+    &lt;/a&gt;
+    &lt;div class=&quot;modal__body&quot;&gt;
+      &lt;div class=&quot;modal__body-title&quot;&gt;
+        Modal title
+      &lt;/div&gt;
+      &lt;div class=&quot;modal__body-text&quot;&gt;
+        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.&lt;br /&gt;
+        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt; 
                   </code>
                 </pre>
               </div>
               <div class="tabs__content tabs__content_2 tabs__content_p0">
                 <pre class="tabs__code">
                   <code>
-                    CSS this
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+
+  transition: all 0.25s;
+  z-index: 111;
+  background-color: var(--bg-grey);
+}
+
+.modal:target {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal__window {
+  position: absolute;
+  max-width: 428px;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px 40px 33px;
+  background-color: var(--white);
+  border-radius: 8px;
+}
+
+.modal__close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
+.modal__svg-icon {
+  color: var(--grey-4);
+  width: 24px;
+  height: 24px;
+}
+
+.modal__body {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  font-family: var(--ff-secondary);
+}
+
+.modal__body-title {
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: var(--grey-5);
+}
+
+.modal__body-text {
+  font-family: inherit;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--grey-4);
+}
                   </code>
                 </pre>
               </div>
